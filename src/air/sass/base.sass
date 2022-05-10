@@ -1,0 +1,75 @@
+html
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'Source Han Sans CN', 'Source Han Sans TC', 'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif
+div,
+button
+    border-radius: 0px
+
+@import ./ui/wh
+@import ./ui/font
+@import ./ui/color
+@import ./ui/other
+@import ./ui/distance
+@import ./ui/layout
+@import ./ui/radius
+
+::-webkit-scrollbar
+	width: 0px !important
+
+html
+    color: $tit
+    font-size: $fs
+    background: $bg !important
+
+*
+    margin: 0
+    padding: 0
+    line-height: $lh
+    box-sizing: border-box
+
+*
+    color: inherit
+    font-size: inherit
+
+@import ./ui/color_implements
+
+a,
+li,
+button 
+    padding: 0
+    transition: all .362s
+
+ul
+    list-style: none
+
+a
+    text-decoration: none
+    
+p
+    line-height: $lh
+    padding-bottom: $ds
+
+.hand,
+i
+    cursor: pointer
+i
+    font-size: 1em
+
+img 
+    width: 100%
+    height: auto
+    user-select: none
+
+.btn,
+button
+    width: auto
+    margin: 0
+    padding: auto
+    cursor: pointer
+    user-select: none
+    box-sizing: border-box
+    background: transparent
+    border: 1px solid transparent
+    outline: 2px solid transparent
+
+
+@import ./lunching.sass

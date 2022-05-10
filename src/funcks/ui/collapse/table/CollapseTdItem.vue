@@ -1,0 +1,37 @@
+<template>
+    <nav class="collapse-item collapse-td-item" :class="{ 'collapse-active': open }">
+        <button class="fx-l" @click="self_change">
+            <icon-dicretion class="collapse-i i_x2" :named="'drop_down'"></icon-dicretion>
+            <slot name="tit"></slot>
+        </button>
+        <div :class="{ 'collapse-td-active': open }">
+            <slot name="cont"></slot>
+        </div>
+    </nav>
+</template>
+<script>
+import IconDicretion from '../../../ui_static/icon/IconDirection.vue'
+export default {
+  components: { IconDicretion },
+    props: [ 'def', 'cancel_self' ],
+    data() { return { open: false } },
+    mounted() { this.open = this.def ? true : false },
+    methods: {
+        self_change() {
+            if (!this.cancel_self) {
+                this.change()
+            }
+        },
+        change() {
+            const src = this.open
+            this.$parent.change(false)
+            this.open = !src
+        }
+    }
+}
+</script>
+<style lang="sass" scoped>
+.collapse-active
+    & > div
+        max-height: 160em
+</style>

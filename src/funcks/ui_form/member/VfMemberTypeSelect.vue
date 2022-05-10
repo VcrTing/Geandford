@@ -1,0 +1,29 @@
+<template>
+    <select v-model="now">
+        <option :value="v.v" v-for="(v, i) in ops" :key="i">{{ v.txt }}</option>
+    </select>
+</template>
+
+<script>
+export default {
+    props: [ 'def' ],
+    data() {
+        return {
+            now: 1,
+            ops: [
+                { txt: '所有人', v: 1 },
+                { txt: '管理层', v: 2 },
+                { txt: '非管理层', v: 3 }
+            ]
+        }
+    },
+    mounted() { this.now = this.def ? this.def : 1 },
+    watch: {
+        now(n, o) { }
+    }
+}
+</script>
+
+<style>
+
+</style>
