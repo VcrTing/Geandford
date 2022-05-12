@@ -11,10 +11,12 @@
 </template>
 <script>
 export default {
-    props: { 
-        icon: { type: String },
-        txt: { type: String },
-        _need_icon: { type: Boolean, default: true }
-    }
+    props: [
+        'active',
+        'icon',
+        'txt',
+        '_need_icon'
+    ],
+    watch: { active(n, o) { if (n) { this.$parent.open = true } } },
 }
 </script>

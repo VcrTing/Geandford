@@ -2,7 +2,7 @@
     <collapse>
         <div v-for="(v, i) in menu" :key="i">
             <!-- 多子菜單 -->
-            <collapse-menu-item class="menu-many-wrapper" v-if="v.children">
+            <collapse-menu-item class="menu-many-wrapper" v-if="v.children" :def="now == v.index">
                 <div slot="tit">
                     <i v-if="v.icon" class="h5 collapse-i" :class="v.icon"></i>
                     <span class="pl_x">{{ v.txt }}</span>
@@ -10,6 +10,7 @@
                 <div slot="cont" class="collapse-item collapse-menu-item">
                     <menu-item v-for="(m, k) in v.children" :key="k"
                         class="pl_menu" @tap="open(m)"
+                        :active="(now_inner == m.index)"
                         :class="{ 'active': now_inner == m.index }"
                         :icon="m.icon" :txt="m.txt" :_need_icon="false"></menu-item>
                 </div>
@@ -52,9 +53,9 @@ export default {
                 {   txt: '文件庫', icon: '',
                     index: 5, link: '/admin/dashboard/' },
                 {   txt: '缺陷整改', icon: '',
-                    index: 6, link: '/admin/dashboard/' },
+                    index: 6, link: '/admin/repair_defects/' },
                 {   txt: '相片報告', icon: '',
-                    index: 7, link: '/admin/dashboard/' },
+                    index: 7, link: '/admin/photo_report/' },
                 {   txt: '日報表', icon: '',
                     index: 8, link: '/admin/dashboard/' },
                 {   txt: '周報表', icon: '',
@@ -62,7 +63,7 @@ export default {
                 {   txt: '月報表', icon: '',
                     index: 10, link: '/admin/dashboard/' },
                 {   txt: '物料', icon: '',
-                    index: 11, link: '/admin/dashboard/' },
+                    index: 11, link: '/admin/material/' },
                 {   txt: '協作人員', icon: '',
                     index: 12, link: '/admin/member_coopera' },
                 {   txt: '相關收件人', icon: '',
@@ -79,26 +80,18 @@ export default {
     },
     mounted() { this.localRoute(this.$route.fullPath) },
     methods: {
-        _route(path, _link, index) { 
-            path = path + ''
-            _link = _link + ''
-            if (_link == path || _link.indexOf(path) >= 0) { 
-                this.now = index 
-                this.now_inner = -1 } 
+        _route(path, rt, index) { 
+            if (rt == path || path.indexOf(rt) >= 0) { 
+                this.now = index; this.now_inner = -1 } 
         },
-        _route_in(path, _link, index) { 
-            path = path + ''
-            _link = _link + ''
-            if (_link == path || path.indexOf(_link) >= 0) { 
-                this.now_inner = index 
-                this.now = -1 } 
+        _route_in(path, rt, index) { 
+            if (rt == path || path.indexOf(rt) >= 0) { 
+                this.now_inner = index; this.now = -1 } 
         },
         localRoute(path) {
             this.menu.map(e => { 
                 if (e.link) { this._route(path, e.link, e.index) }
-                else {
-                    e.children.map(c => { this._route_in(path, c.link, c.index) })
-                }
+                else { e.children.map(c => { this._route_in(path, c.link, c.index) }) }
             })
         },
         open(v) { 

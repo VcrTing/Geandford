@@ -14,8 +14,6 @@ export default {
     },
     methods: {
         auth() {
-            this.$parent.change()
-            console.log(this.$parent.down)
         }
     }
 }

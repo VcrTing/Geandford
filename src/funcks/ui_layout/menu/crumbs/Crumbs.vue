@@ -3,7 +3,7 @@
         <nav class="fx-l">
             <div v-for="(v, i) in crumbs" :key="i" class="">
                 <div class="d-ib" :class="{ 'sub': i < long, '': i >= long }">{{ txts[v] }}</div>
-                <span v-if="i < long" class="pl_n pr">/</span>
+                <span v-if="i < long" class="pl_n pr sub">/</span>
             </div>
         </nav>
         <div>

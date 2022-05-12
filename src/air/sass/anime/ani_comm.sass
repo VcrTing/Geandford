@@ -53,3 +53,19 @@
 .rot-180
     transform: rotate(180deg)
     transition: all .422s ease-in-out
+
+// 局内 紧促 动画
+.fadeR
+    animation: fadeR .362s linear
+
+@keyframes fadeR
+    0%
+        opacity: 0
+        transform: translate3d(-1em, 0, 0)
+    80%
+        opacity: 0.68
+        transform: translate3d(-0.2em, 0, 0)
+    100%
+        opacity: 1
+        transform: translate3d(0, 0, 0)
+        

@@ -8,7 +8,7 @@
                     <vf-table-download-typed-select @sign="(v) => area = v" class="btn-def"></vf-table-download-typed-select>
                 </button>
                 <span class="px_s"></span>
-                <button @click="cFunck(1010)" class="btn-def btn-pri">添加常用表格</button>
+                <button @click="cFunck(1010)" class="btn-def btn-pri fadeR">添加常用表格</button>
             </div>
             <div slot="cont">
                 <div class="table">

@@ -11,9 +11,11 @@
 </template>
 <script>
 export default {
-    props: [ 'no_suffix' ],
+    props: [ 'no_suffix', 'def' ],
     data() { return { open: false } },
-    
+    mounted() {
+        this.open = this.def ? true : false
+    },
     methods: {
         change() {
             const src = this.open

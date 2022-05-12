@@ -25,3 +25,16 @@
     &:hover
         *
             color: $primary_Hover
+
+.txt-pri-hv
+    @extend .hand
+    &:hover,
+        color: $primary
+    i
+        color: currentColor
+
+    &:focus,
+    &:active,
+    &:visited,
+    &:focus-visible
+        box-shadow: 0px 0px 0px 3px $primary

@@ -1,5 +1,5 @@
 <template>
-    <nav class="card-def">
+    <nav class="card-def" contenteditable="true">
         <div class="pro-avatar hand" @click="choise">
             <!--div :style="{
                 'background-image': 'url(../../../../assets/project_cover/1.jpg)'
@@ -22,7 +22,9 @@
                 </div>
                 <h4 class="w-35 t-r pro-i">
                     &nbsp;
-                    <icon-menu :named="'more'"></icon-menu>
+                    <ui-opera-dropdown>
+                        <icon-menu :named="'more'"></icon-menu>
+                    </ui-opera-dropdown>
                 </h4>
             </nav>
             <div class="w-75 pro-sub">
@@ -35,9 +37,10 @@
 </template>
 
 <script>
+import UiOperaDropdown from '../../../ui_element/dropdown/UiOperaDropdown.vue'
 import IconMenu from '../../../ui_static/icon/IconMenu.vue'
 export default {
-  components: { IconMenu },
+  components: { IconMenu, UiOperaDropdown },
     props: [ 'one' ],
     methods: {
         choise() { this.$emit('choise', this.one) }

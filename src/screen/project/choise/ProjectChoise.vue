@@ -2,8 +2,8 @@
     <layout-full :header="'請選擇妳的項目'">
       
       <div class="row_x2 fx-c fx-t">
-        <div class="px card-project upper_x2" v-for="(v, i) in many" :key="i">
-          <card-project :one="v" @choise="active"></card-project>
+        <div class="px card-project ani_proj_card" v-for="(v, i) in many" :key="i">
+          <card-project class="ani_jelly" :one="v" @choise="active"></card-project>
         </div>
       </div>
     </layout-full>
