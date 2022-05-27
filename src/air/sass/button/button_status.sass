@@ -1,13 +1,27 @@
 $succ: #6ae81d // 6BE81F
+$succ_hv: #67e01b
 $err: #E31A1A // #f45d5b // F55C5C
-    
+$err_hv: #dc1818
+
 .succ
     color: $succ
-.btn-succ
-    border: none
+
+.btn-succ,
+.btn-err
+    @extend .clear
+    @extend .br_s
     color: #FFF
+    padding: $ds_s $ds_x
+
+
+.btn-succ
     background: $succ
-    padding: 0.26em $ds
+    &:hover
+        background: $succ_hv
+.btn-err
+    background: $err
+    &:hover
+        background: $err_hv
 
 .err
     color: $err
@@ -25,6 +39,24 @@ $err: #E31A1A // #f45d5b // F55C5C
         background: $err
         height: 5px
         width: 5px
+
+.sts-auditing,
+.sts-aud-err,
+.sts-aud-succ
+    position: relative
+    padding-left: 1.6em
+    &::before  
+        @extend .abs-c
+        height: 5px
+        width: 5px
+        background: none
+        border-radius: 100%
+
+.sts-auditing
+    &::before  
+        height: 0.8em
+        width: 0.8em
+        border: 1px solid $primary
 
 
 

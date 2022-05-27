@@ -1,11 +1,14 @@
 <template>
-    <nav class="input-icon-l">
-        <i class="mdi mdi-magnify h5"></i>
-        <input v-model="q" @keyup.enter="submit" class="input search" type="text" :placeholder="pahd">
+    <nav class="ip-icon-l_x2">
+        <icon-normal @click="submit" class="i_x2" :named="'search'"></icon-normal>
+        <input v-model="q" @keyup.enter="submit" :placeholder="pahd"
+        class="input search" type="text">
     </nav>
 </template>
 <script>
+import IconNormal from '../../ui_static/icon/IconNormal.vue'
 export default {
+  components: { IconNormal },
     props: {
         pahd: { type: String, default: 'Search' }
     },
@@ -14,9 +17,12 @@ export default {
             q: ''
         }
     },
+    watch: {
+        q(n, o) { this.submit() }
+    },
     methods: {
         submit() {
-            console.log('搜索 Q =', this.q)
+            this.$emit('search', this.q)
         }
     }
 }

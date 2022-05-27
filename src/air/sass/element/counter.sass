@@ -39,3 +39,20 @@ $couter_hr: #989999
         cursor: default
     .tid
         cursor: text
+
+//  
+.f-time
+    @extend .bxs
+    @extend .br
+    background: #FFF
+    input
+        cursor: pointer
+        border: none !important
+        &:focus
+            background: $bg_s
+
+.f-search
+    width: calc(15vw + 107px)
+    transition: all .242s ease-in-out
+    &:hover
+        width: calc(19vw + 122px)

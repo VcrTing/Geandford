@@ -1,0 +1,46 @@
+Material Lists: # 材料列表
+    unused count:
+
+    consumed count:
+
+    damage count:
+
+    material name:
+
+    in use count:
+
+    material type:
+
+    total:
+
+    unit price:
+
+    total price:
+
+    damage price:
+
+
+Material orders: # 订购材料，订单
+    expected arrival date: # 预计到达日期
+
+    actual arrival date: # 实际到达日期
+
+    ordered number: # 订购数量
+
+    ordered date: # 订购 日期
+
+    status: # 状态
+
+    uid: # 
+
+    lastest update date: # 订单状态更新时间
+
+    arrived number: # 到达的数量
+
+    isreplacement: # 是否替换件
+
+    material order arrival: # 分批到达记录
+
+    is late addition: # 延迟到达记录
+
+    persion in charge: # 负责人

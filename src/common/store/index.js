@@ -19,11 +19,9 @@ export default new Vuex.Store({
         token: '',
         loading: false,
 
-        user: {
-            id: 1, email: 'support@manfulls.com',
-            username: 'strapi-admin', part: '文员',
-            avatar: 'https://img2.baidu.com/it/u=3474614069,3903854886&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500'
-        },
+        user: { },
+
+        project: { },
         
         // 激活状态，均为 ID
         active: {

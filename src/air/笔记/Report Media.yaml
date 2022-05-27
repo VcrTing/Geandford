@@ -1,0 +1,33 @@
+
+Drawing reports: # 画图报告
+
+Drawing forms: # 绘图列表
+
+Photo reports: # 照片报告
+    uid: # 
+    date: #
+    type: # 类型
+    location: # 坐标
+        latitude:
+        longitude:
+        photo: # 照片
+        description: # 描述
+        address: # 地址文字内容
+
+    photo: # 照片
+        image: # 图片
+        description: # 描述
+    contact: # 联系
+        name: # 联络人名称
+        phone:
+        email:
+        job function:
+    job function: 工作方法
+    additional files: # 增加的 文件
+    situation: # 情况描述
+    pdf report: # 
+
+Photo reports instructions: # 照片报告指示
+    name: # 名称
+    icon: # 图标
+

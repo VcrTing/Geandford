@@ -1,5 +1,7 @@
 <template>
     <div>
+        <router-view/>
+        <div class="py"></div>
         <panel-def>
             <div class="fx-s">
                     <button class="btn-def">普通按钮</button>

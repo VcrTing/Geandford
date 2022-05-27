@@ -1,0 +1,101 @@
+# 日报表
+Daily Report:
+    uid: # ID
+    date: # 时间
+    weather: # 天气
+    job instructions: # 工作
+    signed by: # 通过谁
+    task: # 任务
+    cc: # CC
+    pdf report: # PDF
+    release date: # 释放日期
+
+# 月报表
+Monthly Report:
+    uid: # ID
+    date: # 时间
+    Accident: # 事故
+      accident list: # 事故列表
+      accident this month: # 本月事故
+      injured this month: # 本月受伤
+      send list: # 发送列表
+      serveyor: # 调查人员
+      additional contact: # 增长的接触
+
+    Damage: # 损坏
+      damage this month: # 本月损坏
+      damage list:
+      send list:
+      serveyor:
+      additional contact:
+
+    Hazardous incident: # 危险事件
+      send list:
+      surveyor:
+      additional contact:
+      hazardous incident list: 
+      hazardous incident this month: # 本月危险事件
+
+    pdf report: # PDF
+
+# 星期报表
+Weekly reports:
+    uid:
+    date:
+    serveyor:
+    contractor representative:
+
+
+    Entrance: # 许可
+      done: # 完成？
+      surveyor: # 调查人员
+      item list: # 项目列表
+      survey date: # 调查日期
+
+    General: # 一般
+      done:
+      surveyor:
+      item list:
+      survey date:
+
+    Work at height: # 高处作业
+      done:
+      surveyor:
+      item list:
+      survey date:
+
+    Weight lifting: # 重物
+      donw:
+      surveyor:
+      item list:
+      survey date:
+
+    Electricity: # 电
+      donw:
+      surveyor:
+      item list:
+      survey date:
+
+    Machinery: # 机械
+      donw:
+      surveyor:
+      item list:
+      survey date:
+
+    Fire prevention: # 防火
+      donw:
+      surveyor:
+      item list:
+      survey date:
+
+    Health and safety: # 健康 安全
+      donw:
+      surveyor:
+      item list:
+      survey date:
+
+    Personal safety item: # 安全项目产品
+      donw:
+      surveyor:
+      item list:
+      survey date:

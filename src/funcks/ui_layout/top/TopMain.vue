@@ -2,7 +2,8 @@
     <nav class="fx-s px_x2">
         <div class="w-70">
             <span class="hand view-p" @click="menu(1)">
-                <i class="mdi mdi-menu h5"></i>
+                MENU
+                <!--i class="mdi mdi-menu h5"></i-->
             </span>
         </div>
         <div class="w-30 fx-r">

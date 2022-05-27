@@ -46,28 +46,59 @@ export default {
                             index: 12, link: '/admin/table_download/td_perform', }
                     ]
                 },
-                {   txt: '表格', icon: '',
-                    index: 3, link: '/admin/dashboard/' },
-                {   txt: '改動指示', icon: '',
-                    index: 4, link: '/admin/dashboard/' },
+                {
+                    txt: '日报表', icon: '',
+                    index: 8, link: null,
+                    children: [
+                        {   txt: '建筑施工图报告', icon: '',
+                            index: 81, link: '/admin/daily_report/building_construction_drawing' },
+                        {   txt: '报告预览', icon: '',
+                            index: 82, link: '/admin/daily_report/report_review' },
+                        {   txt: '人力', icon: '',
+                            index: 83, link: '/admin/daily_report/man_power' },
+                        {   txt: '影响因素', icon: '',
+                            index: 84, link: '/admin/daily_report/infi_factor' },
+                        {   txt: '安全问题', icon: '',
+                            index: 85, link: '/admin/daily_report/safety_problem' },
+                    ]
+                },
+                {   txt: '月报表', icon: '',
+                    index: 3, link: null,
+                    children: [
+                        { txt: '报告预览', icon: '',
+                        index: 31, link: '/admin/monthly_report/report_review'},
+                        { txt: '安全培训', icon: '',
+                        index: 32, link: '/admin/monthly_report/safety_training'},
+                        { txt: '安全审查', icon: '',
+                        index: 33, link: '/admin/monthly_report/safety_review'}
+                    ] },
+
+                {   txt: '周报表', icon: '',
+                    index: 4, link: '/admin/weekly_report/weekly_report_detail' },
                 {   txt: '文件庫', icon: '',
                     index: 5, link: '/admin/dashboard/' },
                 {   txt: '缺陷整改', icon: '',
                     index: 6, link: '/admin/repair_defects/' },
                 {   txt: '相片報告', icon: '',
-                    index: 7, link: '/admin/photo_report/' },
-                {   txt: '日報表', icon: '',
-                    index: 8, link: '/admin/dashboard/' },
-                {   txt: '周報表', icon: '',
-                    index: 9, link: '/admin/dashboard/' },
-                {   txt: '月報表', icon: '',
-                    index: 10, link: '/admin/dashboard/' },
+                    index: 7, link: null,
+                    children: [
+                        {   txt: '报告预览', icon: '',
+                            index: 71, link: '/admin/photo_report/photo_report_review' },
+                        {   txt: '相關收件人', icon: '',
+                            index: 72, link: '/admin/dashboard/' },
+                    ]},
                 {   txt: '物料', icon: '',
                     index: 11, link: '/admin/material/' },
-                {   txt: '協作人員', icon: '',
-                    index: 12, link: '/admin/member_coopera' },
-                {   txt: '相關收件人', icon: '',
-                    index: 13, link: '/admin/dashboard/' },
+                {
+                    txt: '人員', icon: '',
+                    index: 12, link: null,
+                    children: [
+                        {   txt: '協作人員', icon: '',
+                            index: 12, link: '/admin/member_coopera' },
+                        {   txt: '相關收件人', icon: '',
+                            index: 13, link: '/admin/dashboard/' },
+                    ]
+                },
             ]
           }
       }

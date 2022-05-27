@@ -21,22 +21,24 @@ const get = async function(uri, token, data){
 }
 */
 
-const get = async function( uri, token, data ) {
-    const url = conf.API + conf.ENDPOINT[ uri ]
+const get = async function( uri, token, data, cdt = '' ) {
+    const url = conf.API + conf.ENDPOINT[ uri ] + '/' + cdt
 
     let res = await axios.get(url, {
         params: data,
         headers: tool.headers(token)
     })
-    // _net(url, token, data)
-    
     return res && res.status == 200 ? res.data : [ ]
 }
 
 const get_one = async function( uri, cdt, token, data ) {
     const url = conf.API + conf.ENDPOINT[ uri ] + '/' + cdt
-    let res = await _net(url, token, data)
-    return res
+
+    let res = await axios.get(url, {
+        params: data,
+        headers: tool.headers(token)
+    })
+    return res && res.status == 200 ? res.data : [ ]
 }
 
 const post = async function( uri, token, data ) {

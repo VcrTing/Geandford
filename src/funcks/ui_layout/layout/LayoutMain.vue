@@ -14,10 +14,18 @@
                 <slot name="cont"></slot>
             </div>
         </div>
+
+        <nav>
+            <tookit-check-user></tookit-check-user>
+            <tookit-check-project></tookit-check-project>
+        </nav>
     </div>
 </template>
 <script>
+import TookitCheckUser from '../../ui_tookit/check/TookitCheckUser.vue'
+import TookitCheckProject from '../../ui_tookit/check/TookitCheckProject.vue'
 export default {
+    components: { TookitCheckUser, TookitCheckProject },
     data() {
         return {
             menu: true,
@@ -31,16 +39,13 @@ export default {
         menu_funck() { return this.$store.state.funck.menu },
 
         // 激活项目
-        project_id() { return this.$store.state.active.project_id }
+        project_id() { return this.$store.state.active.project_id },
     },
     mounted() { 
         this.menu = (this.menu_funck == 1)
-
-        const _id = sessionStorage.getItem('gendford_project_id')
-        if (!_id || _id == 0) { this.go('/project') }
     },
     methods: {
-        close() { this.$store.commit('changeFunck', [ 'menu', 0 ]) }
+        close() { this.$store.commit('changeFunck', [ 'menu', 0 ]) },
     }
 }
 </script>

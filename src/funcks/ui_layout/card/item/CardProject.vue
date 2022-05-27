@@ -1,6 +1,6 @@
 <template>
-    <nav class="card-def" contenteditable="true">
-        <div class="pro-avatar hand" @click="choise">
+    <nav class="card-def">
+        <div v-if="!cover" class="pro-avatar hand" @click="choise">
             <!--div :style="{
                 'background-image': 'url(../../../../assets/project_cover/1.jpg)'
             }"></div-->
@@ -13,6 +13,12 @@
             <img v-else-if="avatar == 7" src="@/assets/project_cover/7.jpg">
             <img v-else-if="avatar == 8" src="@/assets/project_cover/8.jpg">
             <img v-else-if="avatar == 9" src="@/assets/project_cover/9.jpg">
+        </div>
+        <div v-else class="pro-avatar hand" @click="choise">
+            <div :style="{
+                'background-size': 'cover',
+                'background-image': 'url(' + cover + ')'
+            }"></div>
         </div>
 
         <div class="pro-cont">
@@ -49,6 +55,9 @@ export default {
         avatar() {
             let src = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
             return src[ Math.floor( Math.random() * src.length ) ]
+        },
+        cover() {
+            return this.conf.baseURL + this.view.strapi.cover(this.one.thumbnail)
         }
     }
 }

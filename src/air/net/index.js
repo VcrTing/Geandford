@@ -10,5 +10,7 @@ export default {
 
     auth: _auth,
     _admin: _auth._admin,
-    token: (vue) => vue.$store.state.token
+    token: (vue) => vue.$store.state.token,
+
+    
 }

@@ -1,8 +1,11 @@
 <template>
-    <div class="px-0 py-0 br_x4" v-if="mode == 0">
+    <div v-if="mode == 0">
         <nav class="ip-icon-l_x2 br_x4">
             <icon-normal @click="submit" class="i_x2" :named="'search'"></icon-normal>
-            <input v-model="q" @keyup.enter="submit" class="input search input-7 w-100-p bxs" type="text" :placeholder="pahd">
+            <input v-model="q" @keyup.enter="submit" :placeholder="pahd"
+            class="input search bxs ip-tr" type="text"
+            :class="_class"
+            >
         </nav>
     </div>
 </template>
@@ -19,6 +22,10 @@ export default {
         pahd: {
             type: String,
             default: 'Search'
+        },
+        _class: {
+            type: String,
+            default: ' w-100'
         }
     },
     data() {

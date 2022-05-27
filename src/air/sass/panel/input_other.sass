@@ -29,12 +29,12 @@
         border: none !important
 
     input
-        min-width: calc( 74px + 5vw )
+        // min-width: calc( 74px + 5vw )
 
 // 输入框 SIZE
     
 input,
-    min-width: calc( 140px + 5.4vw )
+    // min-width: calc( 140px + 5.4vw )
 
 .input-0,
 .input-0 input
@@ -48,9 +48,12 @@ input,
 .input-4,
 .input-4 input
     min-width: calc( 140px + 5.4vw ) !important
+.input-5,
+.input-5 input
+    min-width: calc( 170px + 12.4vw ) !important
 .input-7,
 .input-7 input
-    min-width: calc( 270px + 8.4vw ) !important
+    min-width: calc( 270px + 22.4vw ) !important
 
 .input-4-limit
     max-width: calc( 140px + 5.4vw ) !important
@@ -181,3 +184,22 @@ select.ip-w-100,
         &:-ms-input-placeholder
         &::-webkit-input-placeholder
             color: $ttd !important
+
+.textarea
+    padding-top: 0.6em
+    padding-bottom: 0.6em
+    min-height: calc( 81px + 3em ) !important
+
+//  
+.ip-tr
+    input
+        padding-top: $ds_s
+        padding-bottom: $ds_s
+        min-height: $h_ip !important
+
+.ip-fr
+    input
+        border: none
+        @extend .bxs
+        border-width: 0px !important
+

@@ -1,6 +1,7 @@
 <template>
-    <div class="panel">
-        <div class="">
+    <div class="panel bxs br upper_x2">
+        <h4 v-if="head">{{ head }}</h4>
+        <div :class="{ 'pt_x': head }" class="upper">
             <slot></slot>
         </div>
     </div>
@@ -8,5 +9,6 @@
 
 <script>
 export default {
+    props: [ 'head' ]
 }
 </script>

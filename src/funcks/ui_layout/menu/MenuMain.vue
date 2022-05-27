@@ -27,7 +27,7 @@ export default {
 
                 {
                     txt: '施工合約', icon: '',
-                    index: 111, link: '/admin/construction_contract/'
+                    index: 111, link: '/admin/contract/contracts_view'
                 },
                 {
                     txt: '工程支出', icon: '',

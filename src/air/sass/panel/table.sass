@@ -1,6 +1,7 @@
 
 $tb-br: #dedede
-$td-br: #A3AED050
+$td-br: #A3AED028
+$td-br_x2: #A3AED064
 
 .table,
 .table-hot
@@ -9,12 +10,12 @@ $td-br: #A3AED050
     .td
         @extend .fx-l
         background: #FFF
-        margin-bottom: 0.82em
 
     .tr
         font-weight: bold
         @extend .bxs
         padding: $ds $ds_x2
+        margin-bottom: $ds
 
     .td
         min-height: 30px
@@ -34,7 +35,8 @@ $td-br: #A3AED050
     margin-bottom: 0.82em
     .td-collsp-sub,
     .collapse-td-item > button
-        padding: $ds $ds_x2
+        @extend .mh
+        padding: $ds_s $ds_x2
     .td
         margin-bottom: 0px
     .td-collsp-td
@@ -119,3 +121,30 @@ $td-br: #A3AED050
     color: $sus
     button:hover
         color: $tit
+
+.table-inn
+    @extend .table
+    & > nav
+        @extend .br
+        @extend .bxs
+        padding: 0 0
+
+    .td
+        padding: $ds $ds_x2
+        border-bottom: 1px solid $td-br_x2
+    .td:last-child
+        border-bottom-color: transparent !important
+
+.table-iine
+    @extend .table
+    .td-wrapper
+        @extend .bxs
+        @extend .br
+        padding: 0 0 0
+        overflow: hidden
+        margin-bottom: 0px !important
+    .td
+        padding: $ds $ds_x2
+        border-bottom: 1px solid $td-br_x2
+    .td:last-child
+        border-bottom-color: transparent !important

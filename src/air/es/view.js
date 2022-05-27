@@ -1,6 +1,7 @@
 
 import timed from './timed/ser_timed'
 import float from './num/float'
+import strapi from './backend/strapi'
 
 const first_Max = function(rec) {
     return rec.slice(0, 1).toUpperCase() + rec.slice(1)
@@ -10,6 +11,7 @@ export default {
     timed,
     ser_timed: timed.ser_timed,
     float,
+    strapi,
 
     //
     set_ss(k, v) {

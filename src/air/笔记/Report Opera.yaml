@@ -1,0 +1,72 @@
+Operational reports: # 操作报告
+    uid: # 唯一标识
+    date: # 时间
+    type: # 类型
+    photo: # 照片
+    contact: # 联络人
+    location: # 位置信息
+    situation: # 状况描述
+    instruction: # 指令吩咐
+    additional files: # 增加的 文件
+
+Progress reports: # 进程报告
+    date start: # 进程开始
+    date end: # 进程结束
+    project uid: # 项目标识
+    report: # 报告
+    uid: # 本标识
+    create date: # 创建日期
+    title: # 进程 标题
+    display option: # 展示设置
+
+Combine form reports: # 合并表单报告
+    project uid: # 项目的 标识
+    uid: # 本标识
+    issue date: # 问题日期
+    expected approval date: # 预计的批准日期
+    actual approval date: # 实际的 批准日期
+    status: # 状态
+    title: # 标题
+    description: # 描述
+    submission date: # 提交日
+
+Combine forms: # 合并的表格
+    uid: # 标识
+    signature: # 签名
+    signed by: # 签署者
+    report uid: # 报告单的标识
+    contractor name: # 承包商名称
+    issue date: 提问日期
+    send list: # 发送 列表
+    status: 状态
+    pdf report: # 
+
+    submission detail: # 提交的内容
+        to: # 收件
+        attention: # 关注
+        submission title: # 提交标题
+        description: # 描述
+        effect on next activities: # 对于后续活动 的 影响
+        time implication: # 时间的含义
+        cost implication: # 花销的含义
+        vo submitted: # 是否提交 vo
+        notification of delay: # 是否延迟提醒
+        expected approval date: # 预期批准日期
+        vo expected submission time: # 预计 vo 提交时间
+        vo actual submission time: # 实际 vo 提交时间
+        submission date: # 提交日期
+
+    review detail: 预览详情
+        is approve: # 是否批准
+        comment: # 评论
+        time implication: # 时间的含义
+        cost implication: # 花销的含义
+        response date: # 相应日期
+        cc client: # 
+        cc architect: #
+        cc res: #
+        cc e m: #
+        cc qs: #
+        cc other: #
+        cc: #
+        actual approval date: # 实际批准日期

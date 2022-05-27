@@ -17,9 +17,10 @@
 
 // 面板
 .panel
+    width: 100%
     padding: $ds $ds_x2
     background: #FFF
-    margin-bottom: $ds
+    margin-bottom: $ds_x
 
 // 
 .panel-cont
@@ -48,6 +49,15 @@
     & > div
         padding-top: 0
 
+// 边栏目
+.paner-menu-second
+    & > div
+        @extend .br
+        @extend .bxs
+        min-height: 60vh
+        background: #FFF
+        padding: $ds
+        min-width: calc( 120px + 4vw )
 
 // 文字区域
 .f-area
@@ -63,3 +73,10 @@
 // 
 .page-cont
     padding-top: $ds_x2
+
+
+.panel-sim
+    @extend .br
+    @extend .bxs
+    overflow: hidden
+    background: #FFF

@@ -7,11 +7,11 @@ const API = baseURL // + '/api'
 
 const ENDPOINT = {
   user: '/users',
-  project: '/projects'
+  project: '/project'
 }
 
 const STRAPI = {
-  named: 'support@manfulls.com',
+  named: 'chiuchohin2@gmail.com', // 'support@manfulls.com',
   pass: '1Qazxc2Wsxcv'
 }
 

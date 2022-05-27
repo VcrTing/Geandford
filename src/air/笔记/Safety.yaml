@@ -1,0 +1,40 @@
+Safety issues: 安全问题
+    uid: # 唯一标识
+    case id: # 案例 ID
+    type: # 安全类型
+    case description: # 案例描述
+    related company: # 关系公司
+    case date: # 案例时间
+    case closed: # 案例关闭
+    project id: # 项目 ID
+    files: # 文件
+    record date: # 记录日期
+
+Safety reviews: 安全评价
+    report abstract: # 报告摘要
+    safety plan inspection: # 安全计划检查
+    risk assessment list: # 风险评估列表
+    signature 1: # 签名一
+    signature 2 : # 签名二
+    correction item: # 修正项目
+    suggestion: # 建议
+    reporter: # 报告人
+    inspector: # 检查员
+    reviewer: # 评估人员
+    uid: # 唯一标识
+    date: # 日期
+    time: # 时间
+    image:
+        image: # 图片
+        description: # 描述
+    edit date: # 编辑日期
+
+Safety trainings: 安全培训
+    uid: # 唯一标识
+    date: # 日期
+    time: # 时间
+    edit date: # 编辑日期
+    attachment: # 附件 
+    attendance: # 出勤人数
+    course title: # 课程标题
+    current topic: # 当前培训主题

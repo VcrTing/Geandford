@@ -1,0 +1,69 @@
+Company:
+    company_email: # 邮箱
+    company_name: # 名称
+    uid: # 唯一标识
+    owner: # 绑定登录用户
+    projects: # 所属项目
+    administrative_employees: # 绑定多个管理层员工,
+    employees: # 员工们
+    contract_sub_types: # 合同子类型
+
+Project permissions: 项目权限
+    c name: # 中文名称
+    order: # 等级
+    permission name: # 权限标识名称
+    permission json: # 权限文字描述
+    project permission: # 所属的后台权限
+
+Project:
+
+    affecting factors: # 影响因素
+    clerk: # 职员
+    commission date: # 委托日期
+
+    company: # 公司
+    contact list: # 联络列表
+
+    contract period: # 合同期限
+    contract value: # 合同内容
+    contracts: # 合同
+
+    daily reports: # 日报表
+
+    deform rectifications: # 变形纠正
+    director: # 董事
+
+    document folder: # 文档文件夹
+    # 主要讓用戶放一些跟項目有關，但並不需要放入已有部份的文件。 例如建築藍圖、安全指引
+
+    drawing reports: # 画图报告
+
+    expected completion date: # 预计竣工日期
+    expected cost: # 预计花费
+    expected profit: # 预计利润
+
+    location: # 坐标
+    material lists: # 材料
+
+    monthly reports: # 月报表
+
+    person in charge: # 负责人 
+
+    photo reports: # 照片报告
+
+    project head: # 项目头，协作人士的主任
+    project manager: # 项目管理者
+    project short form: # 项目简单表格
+    project type: # 项目类型
+
+    regular expenditure: # 常规的支出
+
+    safety reviews: # 安全审查
+    safety trainings: # 安全培训
+
+    vo forms: # Vo 表格
+
+    weekly reports: # 周报表
+
+    work permits: # 工作许可证
+    workers: # 工作人员
