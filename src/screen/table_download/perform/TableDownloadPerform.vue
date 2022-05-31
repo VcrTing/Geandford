@@ -1,7 +1,7 @@
 <template>
         <layout-cont>
             <nav slot="filter">
-                <ui-search :pahd="'請輸入文件名'"></ui-search>
+                <ui-search-def :pahd="'請輸入文件名'"></ui-search-def>
             </nav>
             <div slot="opera">
                 <button class="btn-pri_thin">
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import UiSearch from '../../../funcks/ui_element/search/UiSearch.vue'
+import UiSearchDef from '../../../funcks/ui_element/search/UiSearchDef.vue'
 import UiTableTdCollsp from '../../../funcks/ui_element/table/tdin/UiTableTdCollsp.vue'
 import LayoutCont from '../../../funcks/ui_layout/layout/page/LayoutCont.vue'
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
@@ -47,7 +47,7 @@ import TdperTr from './table/TdperTr.vue'
 import TdperTd from './table/TdperTd.vue'
 
 export default {
-  components: { UiSearch, UiTableTdCollsp, LayoutCont, UiPageEmpty, VfTableDownloadTypedSelect, TdperModal, TdperTr, TdperTd },
+  components: { UiSearchDef, UiTableTdCollsp, LayoutCont, UiPageEmpty, VfTableDownloadTypedSelect, TdperModal, TdperTr, TdperTd },
     mounted() {
     },
     data() { return {

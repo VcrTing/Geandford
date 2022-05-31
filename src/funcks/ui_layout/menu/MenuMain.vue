@@ -27,11 +27,17 @@ export default {
 
                 {
                     txt: '施工合約', icon: '',
-                    index: 111, link: '/admin/contract/contracts_view'
+                    index: 111, link: null,
+                    children: [
+                        {   txt: '预计外判合约', icon: '',
+                            index: 1111, link: '/admin/contract/expect_outso_contract' },
+                        {   txt: '实际外判合约', icon: '',
+                            index: 1112, link: '/admin/contract/actual_outso_contract' },
+                    ]
                 },
                 {
                     txt: '工程支出', icon: '',
-                    index: 112, link: '/admin/engineering_cost/'
+                    index: 112, link: '/admin/cost_statistic/'
                 },
             ]
       }

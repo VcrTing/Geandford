@@ -1,6 +1,5 @@
 <template>
     <nav class="input-icon-l search-top">
-        <i class="mdi mdi-magnify h5"></i>
         <input v-model="q" @keyup.enter="submit" class="search" type="text" :placeholder="pahd">
     </nav>
 </template>

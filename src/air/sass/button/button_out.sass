@@ -20,3 +20,11 @@
     background: $primary_Thin
     border-width: 1px
     border-color: $primary_Thin
+    select
+        @extend .br
+        border: 2px solid transparent
+        transition: all .2s ease-in-out
+    &:hover,
+    &:focus
+        select
+            background: $primary_Thin_Hover

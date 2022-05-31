@@ -11,7 +11,7 @@ export default {
         return {
             now: 1,
             ops: [
-                { txt: '全部', v: 1 },
+                { txt: '所有', v: 1 },
                 { txt: '最近一周', v: 2 },
                 { txt: '最近一月', v: 3 }
             ]

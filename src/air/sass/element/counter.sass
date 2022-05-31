@@ -42,17 +42,41 @@ $couter_hr: #989999
 
 //  
 .f-time
-    @extend .bxs
     @extend .br
     background: #FFF
     input
         cursor: pointer
         border: none !important
         &:focus
-            background: $bg_s
+            // background: $bg_s
 
 .f-search
     width: calc(15vw + 107px)
     transition: all .242s ease-in-out
     &:hover
         width: calc(19vw + 122px)
+
+
+.fiiter-bar
+    @extend .fx-s
+
+    .fb-opera
+        @extend .fx-r
+        @extend .h6
+
+    .fb-many
+        flex: 1
+        @extend .fx-l
+        & > div,
+        & > nav
+            padding-right: $ds
+
+        .input
+            @extend .bxs_n
+        .f-time
+            @extend .bxs
+            input
+                box-shadow: none !important
+
+    .input
+        border-color: transparent

@@ -1,7 +1,7 @@
 <template>
     <layout-screen>
-        <layout-filter-def slot="bar"></layout-filter-def>
-        
+        <layout-filter-time slot="bar"></layout-filter-time>
+
         <div slot="cont" class="w-100">
             <div class="table-iine">
                 <mr-sr-tr></mr-sr-tr>
@@ -20,8 +20,9 @@ import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.v
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
 import MrSrTd from './table/MrSrTd.vue'
 import MrSrTr from './table/MrSrTr.vue'
+import LayoutFilterTime from '../../../funcks/ui_layout/filter/LayoutFilterTime.vue'
 export default {
-  components: { LayoutScreen, MrSrTr, UiPageEmpty, MrSrTd, LayoutFilterDef },
+  components: { LayoutScreen, MrSrTr, UiPageEmpty, MrSrTd, LayoutFilterDef, LayoutFilterTime },
 methods: {
         pagenation(n, ong, limit) {
 

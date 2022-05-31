@@ -2,7 +2,7 @@
     <nav class="collapse-item collapse-menu-item" :class="{ 'collapse-active': open }">
         <button @click="change" class="fx-s" :class="{ 'collapse-button-active': open }">
             <slot name="tit"></slot>
-            <i v-if="!no_suffix" class="mdi mdi-chevron-right collapse-i"></i>
+            <icon-arrow :name="'menu'" class="collapse-i"></icon-arrow>
         </button>
         <div>
             <slot name="cont"></slot>
@@ -10,7 +10,10 @@
     </nav>
 </template>
 <script>
+import IconArrow from "../../../ui_static/icon/IconArrow.vue"
+
 export default {
+    components: { IconArrow },
     props: [ 'no_suffix', 'def' ],
     data() { return { open: false } },
     mounted() {

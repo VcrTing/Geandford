@@ -4,7 +4,7 @@
             <div class="d-ib">
                 <ul class="ul-def ul-pagenation">
                     <li @click="num(-1)"><span>
-                        <i class="mdi mdi-chevron-left h5"></i>
+                        <icon-arrow></icon-arrow>
                     </span></li>
                     <li v-for="(v, i) in pages" :key="i"
                         :class="{ 'active': v == now }"
@@ -13,7 +13,7 @@
                         <span>{{ v }}</span>
                     </li>
                     <li @click="num(1)"><span>
-                        <i class="mdi mdi-chevron-right h5"></i>
+                        <icon-arrow :name="'right'"></icon-arrow>
                     </span></li>
                 </ul>
             </div>
@@ -35,7 +35,9 @@
     </div>
 </template>
 <script>
+import IconArrow from '../../ui_static/icon/IconArrow.vue'
 export default {
+  components: { IconArrow },
     props: {
         count: {
             type: Number,

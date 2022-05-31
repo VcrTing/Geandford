@@ -36,7 +36,6 @@
 import PanelMenuSecond from '../../../funcks/ui/panel/PanelMenuSecond.vue'
 import UiMenuSecond from '../../../funcks/ui_element/menu/UiMenuSecond.vue'
 import UiTdItemsWrapper from '../../../funcks/ui_element/table/td/UiTdItemsWrapper.vue'
-import LayoutFilterDef from '../../../funcks/ui_layout/filter/LayoutFilterDef.vue'
 import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.vue'
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
 import DrBcdTd from './table/DrBcdTd.vue'
@@ -44,7 +43,7 @@ import DrBcdTr from './table/DrBcdTr.vue'
 import LayoutFilterPeriod from '../../../funcks/ui_layout/filter/LayoutFilterPeriod.vue'
 
 export default {
-    components: { LayoutScreen, LayoutFilterDef, PanelMenuSecond, UiPageEmpty, DrBcdTr, DrBcdTd, UiMenuSecond, UiTdItemsWrapper, LayoutFilterPeriod },
+    components: { LayoutScreen, PanelMenuSecond, UiPageEmpty, DrBcdTr, DrBcdTd, UiMenuSecond, UiTdItemsWrapper, LayoutFilterPeriod },
     methods: {
         async fetching() {
             this.loading = true

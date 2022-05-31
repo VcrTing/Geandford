@@ -4,7 +4,7 @@
             <slot name="top"></slot>
         </crumbs>
         <ui-header class="pt_s" :header="_head">
-            <button slot="cont" class="btn-pri wh-btn-simp" @click="$emit('back')">返回</button>
+            <button v-if="back" slot="cont" class="btn-pri wh-btn-simp" @click="$emit('back')">返回</button>
         </ui-header>
 
         <div class="pt_x">
@@ -31,15 +31,23 @@ import UiTableTdCollsp from '@/funcks/ui_element/table/tdin/UiTableTdCollsp.vue'
 import Crumbs from '@/funcks/ui_layout/menu/crumbs/Crumbs.vue'
 export default {
   components: { UiHeader, UiTableTdCollsp, Crumbs },
+    props: {
+        back: {
+            type: Boolean,
+            default: true
+        }    
+    },
     data() {
         return {
             txts: { }
         }
     },
     computed: {
-        _head() { return this.txts ? this.txts[ this.rt ] : '' },
+        _head() { 
+            console.log('rt =', this.rt)
+            return this.txts ? this.txts[ this.rt ] : '' },
         
-        rt() { return this.$route.path.split('/').pop() },
+        rt() { return this.$route.path.split('/').filter(e => e != '').pop() },
     },
     mounted() {
 

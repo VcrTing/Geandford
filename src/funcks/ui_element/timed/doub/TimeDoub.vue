@@ -15,16 +15,17 @@
                 :pahd="'结束时间'"
             ></timed-picker>
         </div>
-        <div>
-            <i class="mdi mdi-calendar-blank h4 sus"></i>
+        <div class="fx-1 fx-r pr_x2">
+            <icon-input></icon-input>
         </div>
     </nav>
 </template>
 <script>
 import moment from 'moment'
 import TimedPicker from '../plugin/TimedPicker.vue'
+import IconInput from '../../../ui_static/icon/IconInput.vue'
 export default {
-  components: { TimedPicker },
+  components: { TimedPicker, IconInput },
     data() {
         return {
             end: '',

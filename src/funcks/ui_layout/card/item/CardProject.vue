@@ -28,9 +28,9 @@
                 </div>
                 <h4 class="w-35 t-r pro-i">
                     &nbsp;
-                    <ui-opera-dropdown>
+                    <!--ui-opera-dropdown>
                         <icon-menu :named="'more'"></icon-menu>
-                    </ui-opera-dropdown>
+                    </ui-opera-dropdown-->
                 </h4>
             </nav>
             <div class="w-75 pro-sub">
@@ -44,9 +44,8 @@
 
 <script>
 import UiOperaDropdown from '../../../ui_element/dropdown/UiOperaDropdown.vue'
-import IconMenu from '../../../ui_static/icon/IconMenu.vue'
 export default {
-  components: { IconMenu, UiOperaDropdown },
+  components: { UiOperaDropdown },
     props: [ 'one' ],
     methods: {
         choise() { this.$emit('choise', this.one) }
@@ -57,7 +56,7 @@ export default {
             return src[ Math.floor( Math.random() * src.length ) ]
         },
         cover() {
-            return this.conf.baseURL + this.view.strapi.cover(this.one.thumbnail)
+            return 0 // this.conf.baseURL + this.view.strapi.cover(this.one.thumbnail)
         }
     }
 }

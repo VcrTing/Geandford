@@ -1,7 +1,7 @@
 <template>
     <nav class="collapse-item collapse-td-item" :class="{ 'collapse-active': open }">
         <button class="fx-l" @click="self_change">
-            <icon-dicretion class="collapse-i i_x2" :named="'drop_down'"></icon-dicretion>
+            <icon-exp></icon-exp>
             <slot name="tit"></slot>
         </button>
         <div :class="{ 'collapse-td-active': open }">
@@ -10,9 +10,9 @@
     </nav>
 </template>
 <script>
-import IconDicretion from '../../../ui_static/icon/IconDirection.vue'
+import IconExp from '../../../ui_static/icon/IconExp.vue'
 export default {
-  components: { IconDicretion },
+  components: { IconExp },
     props: [ 'def', 'cancel_self' ],
     data() { return { open: false } },
     mounted() { this.open = this.def ? true : false },

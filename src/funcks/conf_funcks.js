@@ -56,6 +56,11 @@ const _TIT = {
     'contract': '施工合约',
     'contracts_view': '合约列表',
 
+    'cost_statistic': '工程支出',
+    'expect_outso_contract': '预计外判合约',
+    'actual_outso_contract': '实际外判合约',
+    'actual_outso_contract_detail': '详情'
+
 }
 
 module.exports = {

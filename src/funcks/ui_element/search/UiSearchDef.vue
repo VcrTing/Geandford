@@ -1,16 +1,16 @@
 <template>
     <nav class="ip-icon-l_x2">
-        <icon-normal @click="submit" class="i_x2" :named="'search'"></icon-normal>
         <input v-model="q" @keyup.enter="submit" :placeholder="pahd"
         class="input search" type="text">
+        <icon-input :name="'search'"></icon-input>
     </nav>
 </template>
 <script>
-import IconNormal from '../../ui_static/icon/IconNormal.vue'
+import IconInput from '../../ui_static/icon/IconInput.vue'
 export default {
-  components: { IconNormal },
+  components: {IconInput },
     props: {
-        pahd: { type: String, default: 'Search' }
+        pahd: { type: String, default: '请输入名称或编号进行搜索' }
     },
     data() {
         return {

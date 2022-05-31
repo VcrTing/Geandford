@@ -51,7 +51,6 @@
         </panel-def>
         <panel-def>
             <div class="fx-l">
-                <icon-auth class="" :named="'eye'"></icon-auth>
                 <span class="pl">眼睛</span>
             </div>
         </panel-def>
@@ -62,9 +61,8 @@
 import PanelDef from '../../../funcks/ui/panel/PanelDef.vue'
 import UiIconInput from '../../../funcks/ui_element/input/icon/UiIconInput.vue'
 import UiInlineInputFill from '../../../funcks/ui_element/input/inline/UiInlineInputFill.vue'
-import IconAuth from '../../../funcks/ui_static/icon/IconAuth.vue'
 export default {
-  components: { PanelDef, UiInlineInputFill, UiIconInput, IconAuth },
+  components: { PanelDef, UiInlineInputFill, UiIconInput },
 
 }
 </script>

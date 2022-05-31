@@ -19,6 +19,9 @@ import daily from './report/daily'
 import monthly from './report/monthly'
 import weekly from './report/weekly'
 
+// 其他
+import cost_statistic from './other/cost_statistic'
+
 const ADMIN_ROOT = '/admin'
 
 const AllRoutes = [
@@ -37,7 +40,8 @@ const AllRoutes = [
         ...repair_defects(ADMIN_ROOT + '/repair_defects'),
 
         ...dashboard(ADMIN_ROOT + '/dashboard'),
-        ...table_download(ADMIN_ROOT + '/table_download')
+        ...table_download(ADMIN_ROOT + '/table_download'),
+        ...cost_statistic(ADMIN_ROOT + '/cost_statistic')
       ]
     },
     { path: '', redirect: ADMIN_ROOT, meta: { title: '首页' } },

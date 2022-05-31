@@ -29,17 +29,11 @@
         overflow: hidden
         transform: translateY(-1em)
         transition: all .242s ease-out
-    .collapse-i svg
-        transform: translate(-25%, -50%) rotate(180deg)
 
 .collapse-active
     & > div
         max-height: 24em
         transform: translateY(0px)
-    .collapse-i
-        svg
-            transition: all .242s ease-in
-            transform: translate(-25%, -50%) rotate(0deg)
 
 // 默认
 .collapse-def
@@ -60,19 +54,19 @@
     // margin-bottom: $ds_s
     & > button
         padding: $ds_s $ds_x2
+        &:hover
+            background: $primary_Tiny
+        .collapse-i
+
     & > div
         // margin-top: $ds_s
     .collapse-i
         opacity: 0.8
         font-size: 1em
-        transform: rotate(0deg) translateY(2px) 
         transition: all .122s ease-in
-        &::before
-            font-size: 1.44em
     .collapse-button-active
         .collapse-i
             // color: $primary
-            transform: rotate(90deg) translateX(2px)
 
     .active
         // background: $primary_Hover
@@ -89,6 +83,7 @@
             width: 4px
             opacity: 1
             background: $primary
+            border-radius: 0px
             animation: menu_stick .242s ease-out
 
 @keyframes menu_stick 

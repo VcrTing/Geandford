@@ -1,7 +1,7 @@
 <template>
         <layout-cont>
             <nav slot="filter">
-                <ui-search :pahd="'請輸入姓名或郵箱地址'"></ui-search>
+                <ui-search-def :pahd="'請輸入姓名或郵箱地址'"></ui-search-def>
             </nav>
             <div slot="opera">
                 <button class="btn-pri_thin">
@@ -30,7 +30,7 @@
 
 <script>
 import UiHeader from '../../../funcks/ui_element/header/UiHeader.vue'
-import UiSearch from '../../../funcks/ui_element/search/UiSearch.vue'
+import UiSearchDef from '../../../funcks/ui_element/search/UiSearchDef.vue'
 import UiTableTdCollsp from '../../../funcks/ui_element/table/tdin/UiTableTdCollsp.vue'
 import VfMemberTypeSelect from '../../../funcks/ui_form/member/VfMemberTypeSelect.vue'
 import LayoutCont from '../../../funcks/ui_layout/layout/page/LayoutCont.vue'
@@ -39,7 +39,7 @@ import MemberCooperaModal from './comm/MemberCooperaModal.vue'
 import McTd from './table/McTd.vue'
 import McTr from './table/McTr.vue'
 export default {
-  components: { UiHeader, UiSearch, McTr, McTd, UiTableTdCollsp, Crumbs, LayoutCont, VfMemberTypeSelect, MemberCooperaModal },
+  components: { UiHeader, UiSearchDef, McTr, McTd, UiTableTdCollsp, Crumbs, LayoutCont, VfMemberTypeSelect, MemberCooperaModal },
     mounted() {
     },
     data() { return {

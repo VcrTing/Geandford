@@ -3,6 +3,11 @@ $tb-br: #dedede
 $td-br: #A3AED028
 $td-br_x2: #A3AED064
 
+._tr
+    @extend .h6
+    font-weight: bold
+
+
 .table,
 .table-hot
     @extend .upper
@@ -12,7 +17,7 @@ $td-br_x2: #A3AED064
         background: #FFF
 
     .tr
-        font-weight: bold
+        @extend ._tr
         @extend .bxs
         padding: $ds $ds_x2
         margin-bottom: $ds
@@ -36,14 +41,14 @@ $td-br_x2: #A3AED064
     .td-collsp-sub,
     .collapse-td-item > button
         @extend .mh
-        padding: $ds_s $ds_x2
+        padding: $ds $ds_x2
     .td
         margin-bottom: 0px
     .td-collsp-td
         border: none
         padding: $ds_n 0
         border-top: 1px solid $td-br
-        border-bottom: 1px solid $td-br
+        // border-bottom: 1px solid $td-br
     .td-collsp-sub
         @extend .pl-ip_icon
         color: $sub
@@ -128,6 +133,8 @@ $td-br_x2: #A3AED064
         @extend .br
         @extend .bxs
         padding: 0 0
+        & > div
+            @extend .br
 
     .td
         padding: $ds $ds_x2
@@ -135,8 +142,10 @@ $td-br_x2: #A3AED064
     .td:last-child
         border-bottom-color: transparent !important
 
+
 .table-iine
     @extend .table
+    padding-bottom: $ds
     .td-wrapper
         @extend .bxs
         @extend .br
@@ -148,3 +157,30 @@ $td-br_x2: #A3AED064
         border-bottom: 1px solid $td-br_x2
     .td:last-child
         border-bottom-color: transparent !important
+
+
+.tr-iin,
+.td-iin
+    border-radius: $br
+    @extend .fx-s
+    @extend .bxs_inn
+    padding: $ds $ds_x2
+    margin-bottom: $ds_s
+    & > div
+        min-height: 2px
+.tr-iin
+    @extend ._tr
+    margin-bottom: $ds
+
+.table-photo
+    @extend .br
+    @extend .bxs_inn
+    overflow: hidden
+    .td-iin
+        padding: 0px
+        margin: 0px
+        box-shadow: none
+        border-radius: 0px !important
+        .img
+            width: 100%
+            padding-bottom: 100%

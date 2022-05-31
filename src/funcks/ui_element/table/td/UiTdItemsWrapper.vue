@@ -28,9 +28,8 @@
 <script>
 import Collapse from '../../../ui/collapse/Collapse.vue'
 import CollapseTdItem from '../../../ui/collapse/table/CollapseTdItem.vue'
-import IconDirection from '../../../ui_static/icon/IconDirection.vue'
 export default {
-  components: { Collapse, CollapseTdItem, IconDirection },
+  components: { Collapse, CollapseTdItem },
     props: {
         tit: { type: String, default: '项目' },
         index: { type: Number, default: 1 },
