@@ -4,7 +4,7 @@
             <panel-def :head="'基本信息'">
                 <cp-pro-company-basic></cp-pro-company-basic>
             </panel-def>
-            <panel-def :head="'相关资料'">
+            <panel-def :head="'相關資料'">
                 <cp-weekly-about-msg></cp-weekly-about-msg>
             </panel-def>
             <panel-def :head="'木板路'"><cp-weekly-thing-msgs></cp-weekly-thing-msgs></panel-def>

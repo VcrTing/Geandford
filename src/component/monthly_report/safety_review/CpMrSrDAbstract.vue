@@ -1,11 +1,11 @@
 <template>
     <div>
         <p>
-            报告摘要：{{ one.abstract }}
+            <b>報告摘要：</b>{{ one.abstract }}
         </p>
 
         <div class="fx-l fx-t">
-            <p>安全计划审查：</p>
+            <p>安全計劃審查：</p>
             <div class="fx-1">
                 <div class="pb_s" v-for="(v, i) in one.plans" :key="i">
                     {{ v.name }}

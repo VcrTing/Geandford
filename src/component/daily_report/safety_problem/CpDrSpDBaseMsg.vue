@@ -2,27 +2,27 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                事件编号：<span>{{ one.uid }}</span>
+                <b>事件编号：</b><span>{{ one.uid }}</span>
             </p>
             <p class="w-31">
-                说明：<span>{{ one.msg }}</span>
+                <b>说明：</b><span>{{ one.msg }}</span>
             </p>
             <p class="w-32">
             </p>
         </div>
         <div class="fx-s">
             <p class="w-37">
-                相关公司名称：<span>{{ one.company_name }}</span>
+                <b>相关公司名称：</b><span>{{ one.company_name }}</span>
             </p>
             <p class="w-31">
-                日期：<span>{{ one.date }}</span>
+                <b>日期：</b><span>{{ one.date }}</span>
             </p>
             <p class="w-32">
-                问题类型：<span>{{ one.typed }}</span>
+                <b>问题类型：</b><span>{{ one.typed }}</span>
             </p>
         </div>
         <p>
-            事件结束：<span>{{ one.is_end }}</span>
+            <b>事件结束：</b><span>{{ one.is_end }}</span>
         </p>
     </div>
 </template>

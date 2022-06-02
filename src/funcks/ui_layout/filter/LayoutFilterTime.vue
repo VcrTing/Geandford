@@ -1,9 +1,7 @@
 <template>
     <div class="fiiter-bar">
-        <div class="fx-1">
-            <div class="fb-many">
-                <time-one class="ip-w-100" :def="'2022-12-12'"></time-one>
-            </div>
+        <div class="fb-many fx-1">
+            <time-one class="ip-w-100 input-7" :def="'2022-12-12'"></time-one>
         </div>
 
         <div class="fb-opera">
@@ -14,7 +12,7 @@
             </button>
             <span class="px_s"></span>
             <button class="btn-pri wh-btn">
-                查询
+                查詢
             </button>
         </div>
     </div>

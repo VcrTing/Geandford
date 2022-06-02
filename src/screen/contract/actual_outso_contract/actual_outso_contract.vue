@@ -6,7 +6,7 @@
             <panel-def :head="'基本信息'">
                 <cp-expect-outso-base-msg></cp-expect-outso-base-msg>
             </panel-def>
-            <h4 class="pt_s pb">合同资料</h4>
+            <h4 class="pt_s pb">合同資料</h4>
 
             <ui-page-empty :is_page="false" :load="loading" :srcs="many">
                 <div class="row_x2 f-row">
@@ -53,7 +53,7 @@ export default {
                     nego_date: '2022-12-12', nego_finished_date: '2022-12-12',
                     project_start: '2022-12-12', project_finish: '2022-12-12',
                     contract_totai: '121.2', contract_actual_totai: '223.3',
-                    remark: '延时开始价格降低'
+                    remark: '延時開始價格降低'
                 }
             ]
         }

@@ -10,7 +10,7 @@ import IconInput from '../../ui_static/icon/IconInput.vue'
 export default {
   components: {IconInput },
     props: {
-        pahd: { type: String, default: '请输入名称或编号进行搜索' }
+        pahd: { type: String, default: '請輸入名稱或編號進行搜索' }
     },
     data() {
         return {

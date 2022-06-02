@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="fb-opera">
-            <button class="btn-pri wh-btn">查询</button>
+            <button class="btn-pri wh-btn">查詢</button>
         </div>
     </div>
 </template>

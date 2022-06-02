@@ -2,21 +2,21 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                合同期限（/月）：<span>12</span>
+                <b>合同期限（/月）：</b><span>12</span>
             </p>
             <p class="w-31">
-                合共总价：<span>10000000</span>
+                <b>合共總價：</b><span>10000000</span>
             </p>
             <p class="w-32">
-                每月开支：<span>100000</span>
+                <b>每月開支：</b><span>100000</span>
             </p>
         </div>
         <div class="fx-s">
             <p class="w-37">
-                预期利润（%）：<span>12</span>
+                <b>預期利潤（%）：</b><span>12</span>
             </p>
             <p class="w-31">
-                工程预计可支出：<span>7880000000</span>
+                <b>工程預計可支出：</b><span>7880000000</span>
             </p>
             <p class="w-32">
             </p>

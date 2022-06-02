@@ -1,24 +1,24 @@
 <template>
     <div>
-        <div class="py">
-            <h4 class="pb">风险评估清单</h4>
-            <div class="pl_x3 panel-sim fx-s py">
-                <div class="w-70">
+        <div class="pb">
+            <h4 class="pb">風險評估清單</h4>
+            <div class="td-iin">
+                <div class="w-90">
                     {{ one.list_name }}
                 </div>
-                <div class="w-30 t-r">
+                <div class="w-10 t-r">
                     <ui-table-opera :_mode="2"></ui-table-opera>
                 </div>
             </div>
         </div>
 
         <div class="py" v-for="(v, i) in one.signas" :key="i">
-            <h4 class="pb">负责人签字</h4>
-            <div class="pl_x3 panel-sim fx-s py">
-                <div class="w-70">
+            <h4 class="pb">負責人簽字</h4>
+            <div class="td-iin">
+                <div class="w-90">
                     {{ v.name }}
                 </div>
-                <div class="w-30 t-r">
+                <div class="w-10 t-r">
                     <ui-table-opera :_mode="2"></ui-table-opera>
                 </div>
             </div>

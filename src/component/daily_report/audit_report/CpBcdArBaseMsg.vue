@@ -2,14 +2,14 @@
     <div>
         <div class="fx-s">
             <p class="w-48">
-                根据图纸和所提供的资料，审核情况如下：<span>{{ one.audit }}</span>
+                <b>根據圖紙和所提供的資料，審核情況如下：</b><span>{{ one.audit }}</span>
             </p>
             <p class="w-52">
-                审核完成日期：<span>{{ one.date }}</span>
+                <b>審核完成日期：</b><span>{{ one.date }}</span>
             </p>
         </div>
         <p>
-            负责人签名：<span>{{ one.file_name }}</span><span class="pri px">下载</span>
+            <b>負責人簽名：</b><span>{{ one.file_name }}</span><span class="pri px">下載</span>
         </p>
         <p></p>
     </div>
@@ -25,9 +25,9 @@ export default {
           type: Object,
           default() {
               return {
-                  audit: '审核中',
+                  audit: '審核中',
                   date: '2022-12-12 12:12',
-                  file_name: '签名001.pdf',
+                  file_name: '簽名001.pdf',
                   link: 'https://www.baidu.com'
               }
           }

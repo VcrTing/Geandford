@@ -1,7 +1,7 @@
 <template>
     <div>
-        <form-def :header="'添加协作人员'">
-            <p>内容</p>
+        <form-def :header="'添加協作人員'">
+            <p>內容</p>
         </form-def>
     </div>
 </template>

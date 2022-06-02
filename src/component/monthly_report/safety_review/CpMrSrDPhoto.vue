@@ -1,11 +1,11 @@
 <template>
     <div>
-        <h4 class="py">照片</h4>
-        <div class="td pl-ip_icon panel-sim py fx-s">
-            <div class="w-70">
+        <h4 class="pb">照片</h4>
+        <div class="td-iin">
+            <div class="w-90">
                 {{ one.img }}
             </div>
-            <div class="w-30">
+            <div class="w-10">
                 <ui-table-opera :_mode="2"></ui-table-opera>
             </div>
         </div>
@@ -21,7 +21,7 @@ export default {
             type: Object,
             default() {
                 return {
-                    img: '1901 安全现场.jpg'
+                    img: '1901 安全現場.jpg'
                 }
             }
         }

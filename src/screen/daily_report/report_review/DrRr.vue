@@ -8,7 +8,7 @@
 
                 <ui-page-empty @change="pagenation" :load="loading" :srcs="many">
                     <ui-td-items-wrapper v-for="(m, j) in many" :key="j"
-                        :index="j" :tit="'报告'" :plus="'添加物品'">
+                        :index="j" :tit="'報告'" :plus="'添加物品'">
                         <dr-rr-td v-for="(v, i) in m.children" :key="i" :one="v"></dr-rr-td>
                     </ui-td-items-wrapper>
                 </ui-page-empty>

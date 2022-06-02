@@ -36,7 +36,7 @@ export default {
         return {
             loading: true, many: [ 
                 { 
-                    name: '案例001', contact: '柳叶眉', msg: '这里是个案',
+                    name: '案例001', contact: '柳葉眉', msg: '這裏是個案',
                     uid: 'manfulls-001;tst-002;00001', 
                     date: '2022-12-12 12:12', status: false
                 } 

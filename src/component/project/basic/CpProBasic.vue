@@ -2,17 +2,17 @@
     <div class="fx-s">
         <div class="w-40">
             <p>
-                <b>承包商名称：</b>
+                <b>承包商名稱：</b>
                 <span>Dianna</span>
             </p>
             <p>
-                <b>参考编号：</b>
+                <b>參考編號：</b>
                 <span>manfulls-001</span>
             </p>
         </div>
         <div class="w-60">
             <p>
-                <b>项目名称：</b>
+                <b>項目名稱：</b>
                 <span>Cody</span>
             </p>
             <p>

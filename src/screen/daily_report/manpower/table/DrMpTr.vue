@@ -1,8 +1,8 @@
 <template>
     <div class="tr pl-ip_icon">
-        <div class="w-26">工种</div>
-        <div class="w-24">总工作时数（/hr）</div>
-        <div class="w-22">人员数量（位）</div>
+        <div class="w-26">工種</div>
+        <div class="w-24">總工作時數（/hr）</div>
+        <div class="w-22">人員數量（位）</div>
         <div class="w-18">日期</div>
         <div class="w-10 t-c">
         </div>

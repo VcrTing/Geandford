@@ -1,5 +1,5 @@
 <template>
-    <layout-screen :cls_bar="'pt'">
+    <layout-screen>
         <layout-filter-full class="mt-0" slot="bar"></layout-filter-full>
         <div slot="cont" class="w-100">
             <div class="table-iine">

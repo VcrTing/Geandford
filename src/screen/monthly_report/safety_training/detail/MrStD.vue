@@ -5,11 +5,11 @@
                 <cp-mr-st-d-base-msg></cp-mr-st-d-base-msg>
             </panel-def>
 
-            <panel-def :head="'安全和环境培训'">
+            <panel-def :head="'安全和環境培訓'">
                 <cp-mr-st-d-environ></cp-mr-st-d-environ>
             </panel-def>
 
-            <h4 class="pb pt_s">当前期间主题谈话清单</h4>
+            <h4 class="pb pt_s">當前期間主題談話清單</h4>
             <div class="panel-sim table-iine">
                 <div class="td pl-ip_icon" v-for="(v, i) in many_taik" :key="i">{{ v.name }}</div>
             </div>
@@ -47,10 +47,10 @@ methods: {
     data() {
         return {
             loading: true, 
-            many_taik: [ { name: '电梯维修' }, { name: '大厅修整' } ],
+            many_taik: [ { name: '電梯維修' }, { name: '大廳修整' } ],
             many: [ 
                 { 
-                    company_name: '刘总', project_name: '安全问题项目',
+                    company_name: '劉總', project_name: '安全問題項目',
                     uid: 'manfulls-001;tst-002;00001', 
                     date: '2022-12-12 12:12', status: false
                 } 

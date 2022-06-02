@@ -9,7 +9,7 @@
                 <div class="w-22 t-r">
                     <button class="btn-pri_thin px_x2 py_s">返回</button>
                     <span class="px_s"></span>
-                    <button class="btn-pri px_x2 py_s">下一页</button>
+                    <button class="btn-pri px_x2 py_s">下壹頁</button>
                 </div>
             </div>
             <aoc-d-paner-one v-if="tb == 1"></aoc-d-paner-one>

@@ -6,11 +6,11 @@
                 <cp-bcd-tr-base-msg></cp-bcd-tr-base-msg>
             </panel-def>
 
-            <panel-def :head="'上传细节'">
+            <panel-def :head="'上傳細節'">
                 <cp-bcd-tr-up-msg></cp-bcd-tr-up-msg>
             </panel-def>
 
-            <panel-def :head="'备注'">
+            <panel-def :head="'備註'">
                 <cp-bcd-tv-mark-msg></cp-bcd-tv-mark-msg>
             </panel-def>
         </div>

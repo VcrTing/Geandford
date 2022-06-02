@@ -5,10 +5,10 @@
             
         </layout-filter-period>
 
-        <ui-menu-second slot="left" :plus="'添加报告'" :items="[
-            { txt: '报告一', pk: 202001 },
-            { txt: '报告二', pk: 202002 },
-            { txt: '报告三', pk: 202003 },
+        <ui-menu-second slot="left" :plus="'添加報告'" :items="[
+            { txt: '報告壹', pk: 202001 },
+            { txt: '報告二', pk: 202002 },
+            { txt: '報告三', pk: 202003 },
         ]"
             :def="second" @change="(v) => second = v"
         ></ui-menu-second>

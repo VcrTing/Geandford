@@ -7,7 +7,7 @@
                     <slot></slot>
                 </div>
 
-                <div v-if="is_page" class="pt_x3">
+                <div v-if="is_page" class="pt_x4">
                     <pagenation :_big="false" :count="total" @change="$emit('change')"></pagenation>
                 </div>
             </div>

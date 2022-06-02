@@ -2,35 +2,35 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                洽谈合约日期：<span>2022-12-12</span>
+                <b>洽談合約日期：</b><span>2022-12-12</span>
             </p>
             <p class="w-31">
-                完成洽谈合约日期：<span>2022-12-12</span>
+                <b>完成洽談合約日期：</b><span>2022-12-12</span>
             </p>
             <p class="w-37"></p>
         </div>
         <div class="fx-s">
             <p class="w-37">
-                工程开始时间：<span>2022-12-12</span>
+                <b>工程開始時間：</b><span>2022-12-12</span>
             </p>
             <p class="w-31">
-                完成时间：<span>2022-12-12</span>
+                <b>完成時間：</b><span>2022-12-12</span>
             </p>
             <p class="w-37"></p>
         </div>
         <div class="fx-s">
             <p class="w-37">
-                标预计合约总价：<span>350005000</span>
+                <b>標預計合約總價：</b><span>350005000</span>
             </p>
             <p class="w-31">
-                合约总价：<span>3003000</span>
+                <b>合約總價：</b><span>3003000</span>
             </p>
             <p class="w-37">
-                实际外判价：<span>2500000</span>
+                <b>實際外判價：</b><span>2500000</span>
             </p>
         </div>
         <p>
-            备注：<span>延迟开始但价格较低</span>
+            <b>備註：</b><span>延遲開始但價格較低</span>
         </p>
     </div>
 </template>

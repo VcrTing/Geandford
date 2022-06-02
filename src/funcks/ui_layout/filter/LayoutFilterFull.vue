@@ -5,7 +5,7 @@
         </div>
         <vf-def-select class="btn-pri_thin wh-btn"></vf-def-select>
         <span class="px_s"></span>
-        <button class="wh-btn btn-pri">查询</button>
+        <button class="wh-btn btn-pri">查詢</button>
     </div>
 </template>
 

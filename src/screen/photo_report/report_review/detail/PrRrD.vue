@@ -20,8 +20,8 @@
                 <div class="pb"></div>
             </panel-def>
 
-            <panel-def :head="'发送列表'">
-                <p class="fs_s">类别：<span>RFI</span></p>
+            <panel-def :head="'發送列表'">
+                <p class="fs_s">類別：<span>RFI</span></p>
                 <h4 class="pb">其他收件人</h4>
                 <div class="table-iine">
                     <pr-rr-d-tr-tr></pr-rr-d-tr-tr>
@@ -69,13 +69,13 @@ methods: {
             loading: true, many_photo: [ 
                 { 
                     name: '29990=awqeqweq--12',
-                    remark: '施工图片', 
+                    remark: '施工圖片', 
                     date: '2022-12-12 12:12',
                     img: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202107%2F17%2F20210717232533_2edcf.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656501007&t=5cdb97e7d0e74a55df61b88f3b98405e',
                 },
                 { 
                     name: '29990=awqeqweq--1233',
-                    remark: '施工图片 222', 
+                    remark: '施工圖片 222', 
                     date: '2022-12-12 12:12',
                     img: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201912%2F28%2F20191228105602_4Wm5z.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1656501790&t=37f804c0b4b5416d8a8d4ec538557c0d',
                 }

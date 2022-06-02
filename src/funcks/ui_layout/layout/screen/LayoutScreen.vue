@@ -1,9 +1,8 @@
 <template>
     <div>
-        <crumbs ref="cruREF">
-            
-        </crumbs>
-        <ui-header class="pt_s" :header="_head">
+        <crumbs ref="cruREF"></crumbs>
+
+        <ui-header class="" :header="_head">
             <slot slot="cont" name="top"></slot>
         </ui-header>
 
@@ -28,7 +27,7 @@ export default {
   components: { UiHeader, UiTableTdCollsp, Crumbs },
     props: {
         cls_bar: {
-            type: String, default: 'pt_x2'
+            type: String, default: 'pt_x'
         }
     },
     data() {
@@ -48,6 +47,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

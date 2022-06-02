@@ -3,10 +3,10 @@
             <panel-def :head="'基本信息'">
                 <cp-aoc-d-base-msg></cp-aoc-d-base-msg>
             </panel-def>
-            <panel-def :head="'合约信息'">
+            <panel-def :head="'合約信息'">
                 <cp-aoc-d-cont-msg></cp-aoc-d-cont-msg>
             </panel-def>
-            <panel-def :head="'合约协议列表'">
+            <panel-def :head="'合約協議列表'">
                 <aoc-d-trems></aoc-d-trems>
                 <div class="pb_s"></div>
             </panel-def>
@@ -55,19 +55,19 @@ export default {
         return {
             loading: true, many: [
                 { 
-                    tit: '雇主', children: [ { name_ch: '张安', name_en: 'ZHANG', phone: '+888 88888' } ]
+                    tit: '雇主', children: [ { name_ch: '張安', name_en: 'ZHANG', phone: '+888 88888' } ]
                 },
                 { 
-                    tit: '委托代理人', children: [ { name_ch: '张安', name_en: 'ZHANG', phone: '+888 88888' } ]
+                    tit: '委托代理人', children: [ { name_ch: '張安', name_en: 'ZHANG', phone: '+888 88888' } ]
                 },
                 { 
-                    tit: '东主或代理人', children: [ { name_ch: '张安', name_en: 'ZHANG', phone: '+888 88888' } ]
+                    tit: '東主或代理人', children: [ { name_ch: '張安', name_en: 'ZHANG', phone: '+888 88888' } ]
                 },
                 { 
-                    tit: '本工程设计师', children: [ { name_ch: '张安', name_en: 'ZHANG', phone: '+888 88888' }, { name_ch: '张安 2', name_en: 'ZHANG 2', phone: '+888 88888' } ]
+                    tit: '本工程設計師', children: [ { name_ch: '張安', name_en: 'ZHANG', phone: '+888 88888' }, { name_ch: '張安 2', name_en: 'ZHANG 2', phone: '+888 88888' } ]
                 },
                 { 
-                    tit: '本工程负责人', children: [ { name_ch: '张安', name_en: 'ZHANG', phone: '+888 88888' } ]
+                    tit: '本工程負責人', children: [ { name_ch: '張安', name_en: 'ZHANG', phone: '+888 88888' } ]
                 },
             ]
         }

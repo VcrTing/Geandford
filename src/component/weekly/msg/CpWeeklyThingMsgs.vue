@@ -2,17 +2,17 @@
     <div class="">
         <div class="fx-s">
             <p :class="'w-' + wide[0]">
-                情况：<span>{{ one.situa }}</span>
+                <b>情況：</b><span>{{ one.situa }}</span>
             </p>
             <p :class="'w-' + wide[1]">
-                日期：{{ one.date }}
+                <b>日期：</b>{{ one.date }}
             </p>
             <p :class="'w-' + wide[2]">
-                负责人：{{ one.charge }}
+                <b>負責人：</b>{{ one.charge }}
             </p>
         </div>
         <p>
-            事情简介：<span>{{ one.message }}</span>
+            <b>事情簡介：</b><span>{{ one.message }}</span>
         </p>
     </div>
 </template>
@@ -24,10 +24,10 @@ export default {
             type: Object,
             default() {
                 return {
-                    situa: '满意/没有明发现',
+                    situa: '滿意/沒有明發現',
                     date: '2022-12-12',
                     charge: 'Jon Bob',
-                    message: '无异常'
+                    message: '無異常'
                 }
             }
         },

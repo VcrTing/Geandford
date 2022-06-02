@@ -6,12 +6,12 @@
         <div slot="cont" class="fs_ipt dw-def">
             <button class="fx-l txt-pri-hv">
                 <i class="mdi mdi-pen h5"></i>&nbsp;&nbsp;
-                编辑
+                編輯
             </button>
             <hr/>
             <button class="fx-l txt-pri-hv">
                 <i class="mdi mdi-trash-can h5"></i>&nbsp;&nbsp;
-                删除
+                刪除
             </button>
         </div>
     </drop-down>

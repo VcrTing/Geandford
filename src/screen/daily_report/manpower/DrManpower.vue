@@ -1,6 +1,6 @@
 <template>
     <layout-screen>
-        <layout-filter-def :_pahd="'输入搜索内容'" :_timed="true" slot="bar"></layout-filter-def>
+        <layout-filter-def :_pahd="'輸入搜索內容'" :_timed="true" slot="bar"></layout-filter-def>
         <div slot="cont" class="w-100">
             <div class="table-iine">
                 <dr-mp-tr></dr-mp-tr>

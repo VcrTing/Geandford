@@ -2,26 +2,26 @@
     <div >
         <div class="fx-s">
             <p :class="'w-' + wide[0]">
-                <b>公司名称：</b>
+                <b>公司名稱：</b>
                 <span>Jenny Wilson</span>
             </p>
             <p :class="'w-' + wide[1]">
-                <b>项目名称：</b>
+                <b>項目名稱：</b>
                 <span>Culi Lucy</span>
             </p>
             <p :class="'w-' + wide[2]">
-                <b>分别代表：</b>
+                <b>分別代表：</b>
                 <span>Cody Finsher</span>
             </p>
         </div>
         <p class="w-100">
-            <b>参考编号：</b>
+            <b>參考編號：</b>
             <span>manuflls-001;tst-001;</span>
         </p>
         <div class="fx-s">
             <p :class="'w-' + wide[0]">
-                <b>类别：</b>
-                <span>起重装置</span>
+                <b>類別：</b>
+                <span>起重裝置</span>
             </p>
             <p :class="'w-' + wide[1]">
                 <b>日期：</b>

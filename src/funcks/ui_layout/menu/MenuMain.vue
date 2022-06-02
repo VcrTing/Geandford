@@ -6,10 +6,8 @@
         </div>
         
         <div class="menu-hr"></div>
-        <menu-main-inner class="pt"></menu-main-inner>
-        <div class="menu-hr"></div>
-        <menu-main-inner class="py" :menu="menu_special"></menu-main-inner>
-
+        <menu-main-inner class="py"></menu-main-inner>
+        <div class="py"></div>
         <!-- 用戶問題 -->
         <div class="menu-space"></div>
         <menu-auth-card></menu-auth-card>
@@ -19,27 +17,12 @@
 import Logo from '../../ui_static/logo/Logo.vue'
 import MenuAuthCard from './auth/MenuAuthCard.vue'
 import MenuMainInner from './inner/MenuMainInner.vue'
+import Collapse from '../../ui/collapse/Collapse.vue'
 export default {
-  components: { Logo, MenuMainInner, MenuAuthCard },
+  components: { Logo, MenuMainInner, MenuAuthCard, Collapse },
   data() {
       return {
-            menu_special: [
-
-                {
-                    txt: '施工合約', icon: '',
-                    index: 111, link: null,
-                    children: [
-                        {   txt: '预计外判合约', icon: '',
-                            index: 1111, link: '/admin/contract/expect_outso_contract' },
-                        {   txt: '实际外判合约', icon: '',
-                            index: 1112, link: '/admin/contract/actual_outso_contract' },
-                    ]
-                },
-                {
-                    txt: '工程支出', icon: '',
-                    index: 112, link: '/admin/cost_statistic/'
-                },
-            ]
+          
       }
   }
 }

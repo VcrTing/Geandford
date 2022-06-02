@@ -15,7 +15,7 @@
             <panel-def>
                 <div class="py"></div>
                 <mr-rr-a></mr-rr-a>
-                <div class="pt_x3 pb_x">相关提示：RFI</div>
+                <div class="pt_x3 pb_x">相關提示：RFI</div>
                 <mr-rr-rfi></mr-rr-rfi>
                 <div class="py"></div>
             </panel-def>

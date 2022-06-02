@@ -36,7 +36,7 @@ methods: {
         return {
             loading: true, many: [ 
                 { 
-                    project_name: '安全问题项目',
+                    project_name: '安全問題項目',
                     uid: 'manfulls-001;tst-002;00001', 
                     date: '2022-12-12 12:12', status: false
                 } 

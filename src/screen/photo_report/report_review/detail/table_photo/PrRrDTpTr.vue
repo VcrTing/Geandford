@@ -5,10 +5,10 @@
         </div>
         <div class="w-4"></div>
         <div class="w-30">
-            名称
+            名稱
         </div>
         <div class="w-36">
-            备注
+            備註
         </div>
         <div class="w-13">
             日期

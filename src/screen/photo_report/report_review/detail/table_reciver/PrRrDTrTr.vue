@@ -4,13 +4,13 @@
             姓名
         </div>
         <div class="w-32">
-            邮箱
+            郵箱
         </div>
         <div class="w-24">
-            电话
+            電話
         </div>
         <div class="w-16">
-            类别
+            類別
         </div>
     </div>
 </template>

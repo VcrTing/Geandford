@@ -7,8 +7,8 @@
             <view-audit-status :audit="!one.status" :status="one.status"></view-audit-status>
         </div>
         <div class="w-18 t-c">
-            <a class="pri" @click="go(rt + '/bcd_table_review')">表格预览</a>&nbsp;&nbsp;
-            <a class="pri" @click="go(rt + '/bcd_audit_report')">审核报告</a>
+            <a class="pri" @click="go(rt + '/bcd_table_review')">表格預覽</a>&nbsp;&nbsp;
+            <a class="pri" @click="go(rt + '/bcd_audit_report')">審核報告</a>
         </div>
     </div>
 </template>

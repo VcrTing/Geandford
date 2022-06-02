@@ -1,10 +1,10 @@
 <template>
     <div class="fx-s">
         <p class="w-37">
-            承包商名称：{{ one.company_name }}
+            <b>承包商名稱：</b>{{ one.company_name }}
         </p>
         <p class="w-31">
-            项目名称：{{ one.project_name }}
+            <b>項目名稱：</b>{{ one.project_name }}
         </p>
         <p class="w-32"></p>
     </div>
@@ -18,7 +18,7 @@ export default {
             default() {
                 return {
                     company_name: 'Wade Name',
-                    project_name: '很棒的工程项目'
+                    project_name: '很棒的工程項目'
                 }
             }
         }

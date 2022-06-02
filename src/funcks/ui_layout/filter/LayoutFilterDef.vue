@@ -22,7 +22,7 @@
             </button>
             <span class="px_s"></span>
             <button class="btn-pri wh-btn">
-                查询
+                查詢
             </button>
         </div>
     </div>

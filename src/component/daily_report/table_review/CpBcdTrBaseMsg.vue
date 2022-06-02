@@ -2,18 +2,18 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                标题：<span>{{ one.title }}</span>
+                <b>標題：</b><span>{{ one.title }}</span>
             </p>
             <p class="w-31">
-                日期：<span>{{ one.date }}</span>
+                <b>日期：</b><span>{{ one.date }}</span>
             </p>
             <p class="w-32"></p>
         </div>
         <p>
-            参考编号：<span>{{ one.uid }}</span>
+            <b>參考編號：</b><span>{{ one.uid }}</span>
         </p>
         <p>
-            关于上次提交资料的参考编号：<span>{{ one.uid_last }}</span>
+            <b>關於上次提交資料的參考編號：</b><span>{{ one.uid_last }}</span>
         </p>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
           type: Object,
           default() {
               return {
-                  title: '项目2', date: '2022-12-12',
+                  title: '項目2', date: '2022-12-12',
                   uid: 'user-0001;date-2022-12-12',
                   uid_last: 'user-0001;date-2333-23-23'
               }

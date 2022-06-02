@@ -1,17 +1,17 @@
 <template>
     <div class="row_x2 fx-s fx-b">
         <div class="w-333">
-            <card-danger-report @detail="openDetail" :head="'伤害报告'" :many="many_danger">
+            <card-danger-report @detail="openDetail" :head="'傷害報告'" :many="many_danger">
 
             </card-danger-report>
         </div>
         <div class="w-333">
-            <card-danger-report @detail="openDetail" :head="'第三方财产和公用设施损坏报告'" :many="many_facility">
+            <card-danger-report @detail="openDetail" :head="'第三方財產和公用設施損壞報告'" :many="many_facility">
 
             </card-danger-report>
         </div>
         <div class="w-333">
-            <card-danger-report @detail="openDetail" :head="'伤害报告'" :many="many_damage">
+            <card-danger-report @detail="openDetail" :head="'傷害報告'" :many="many_damage">
             
             </card-danger-report>
         </div>
@@ -25,14 +25,14 @@ export default {
     data() {
         return {
             many_danger: [
-                { txt: '本月累计伤亡人数', num: 0 },
-                { txt: '本月累计事故', num: 4 }
+                { txt: '本月累計傷亡人數', num: 0 },
+                { txt: '本月累計事故', num: 4 }
             ],
             many_facility: [
-                { txt: '数量', num: 4 },
+                { txt: '數量', num: 4 },
             ],
             many_damage: [
-                { txt: '数量', num: 1 },
+                { txt: '數量', num: 1 },
             ],
         }
     }

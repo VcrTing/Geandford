@@ -2,13 +2,13 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                项目名称：<span>Kings</span>
+                <b>項目名稱：</b><span>Kings</span>
             </p>
             <p class="w-31">
-                合约编号：<span>test-0001;009</span>
+                <b>合約編號：</b><span>test-0001;009</span>
             </p>
             <p class="w-32">
-                工程预计可支出：<span>8000000</span>
+                <b>工程預計可支出：</b><span>8000000</span>
             </p>
         </div>
     </div>

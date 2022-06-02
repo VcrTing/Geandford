@@ -1,13 +1,13 @@
 <template>
     <span v-if="audit" class="sts-auditing">
-        审核中
+        審核中
     </span>
     <span v-else>
         <span v-if="status" class="sts-aud-succ">
-            审核通过
+            審核通過
         </span>
         <span v-else class="sts-aud-err">
-            未通过
+            未通過
         </span>
     </span>
 </template>

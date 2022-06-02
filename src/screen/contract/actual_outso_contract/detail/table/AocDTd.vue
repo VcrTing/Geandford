@@ -13,7 +13,7 @@ export default {
             type: Object,
             default() {
                 return {
-                    name_ch: '张总',
+                    name_ch: '張總',
                     name_en: 'Zhang',
                     phone: '+877 8888888'
                 }

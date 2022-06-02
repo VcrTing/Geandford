@@ -8,7 +8,7 @@
             <div class="pr pb">
                 {{ v.txt }}
             </div>
-            <div class="fx-r err" @click="trash(i)">删除</div>
+            <div class="fx-r err" @click="trash(i)">刪除</div>
         </div>
     </div>
 </template>

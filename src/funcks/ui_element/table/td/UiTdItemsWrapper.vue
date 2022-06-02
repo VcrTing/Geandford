@@ -31,13 +31,13 @@ import CollapseTdItem from '../../../ui/collapse/table/CollapseTdItem.vue'
 export default {
   components: { Collapse, CollapseTdItem },
     props: {
-        tit: { type: String, default: '项目' },
+        tit: { type: String, default: '項目' },
         index: { type: Number, default: 1 },
 
-        plus: { type: String, default: '添加项目' },
+        plus: { type: String, default: '添加項目' },
 
-        status: { type: Number, default: -1 }, // -1 不显示
-        status_mode: { type: Number , default: 1 } // 1 默认模式
+        status: { type: Number, default: -1 }, // -1 不顯示
+        status_mode: { type: Number , default: 1 } // 1 默認模式
     }
 }
 </script>

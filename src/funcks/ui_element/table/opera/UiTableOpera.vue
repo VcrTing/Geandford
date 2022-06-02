@@ -3,11 +3,11 @@
         <button @click="view">檢視</button>
     </nav>
     <nav class="fx-c tb-opera pri_son" v-else-if="_mode == 2">
-        <button @click="view">下载</button>
+        <button @click="view">下載</button>
     </nav>
     <nav class="fx-c tb-opera pri_son" v-else-if="_mode == 3">
-        <!-- 绝对单独的 详情 字眼 -->
-        <button @click="view">详情</button>
+        <!-- 絕對單獨的 詳情 字眼 -->
+        <button @click="view">詳情</button>
     </nav>
     <nav v-else class="fx-c tb-opera">
         <button @click="edit">編輯</button>

@@ -1,10 +1,10 @@
 <template>
-    <div class="panel bxs br upper_x2">
+    <nav class="panel upper_x2">
         <h4 v-if="head">{{ head }}</h4>
         <div :class="{ 'pt_x': head }" class="upper">
             <slot></slot>
         </div>
-    </div>
+    </nav>
 </template>
 
 <script>

@@ -10,7 +10,7 @@
             <panel-def>
                 <cp-mr-sr-d-signa-pan></cp-mr-sr-d-signa-pan>
             </panel-def>
-            <panel-def :head="'补充信息'">
+            <panel-def :head="'補充信息'">
                 <cp-mr-sr-d-extra-info></cp-mr-sr-d-extra-info>
             </panel-def>
             <panel-def>
