@@ -1,6 +1,6 @@
 <template>
     <nav class="panel upper_x2">
-        <h4 v-if="head">{{ head }}</h4>
+        <h4 v-if="head" class="t-cap">{{ head }}</h4>
         <div :class="{ 'pt_x': head }" class="upper">
             <slot></slot>
         </div>

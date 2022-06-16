@@ -1,30 +1,43 @@
 <template>
-    <div>
+    <div v-if="!load">
         <p>
-            <b>需要改正事項：</b>{{ one.change_thing }}
+            <b>需要改正事項：</b>{{ one.correction_item }}
         </p>
 
         <div class="fx-s">
             <p class="w-37">
-                <b>建議：</b>{{ one.advice }}
+                <b>建議：</b>{{ one.suggestion }}
             </p>
             <p class="w-31">
             </p>
             <p class="w-32">
-                <b>日期：</b>{{ one.date }}
+                <b>日期：</b>{{ one.edit_date }}
             </p>
         </div>
 
         <div class="fx-s">
-            <p class="w-37">
-                <b>報告者：</b>{{ one.who_report }}
-            </p>
-            <p class="w-31">
-                <b>檢查者：</b>{{ one.who_check }}
-            </p>
-            <p class="w-32">
-                <b>審核者：</b>{{ one.who_audit }}
-            </p>
+            <div class="w-37">
+                <b>報告者：</b>{{ one.reporter }}
+            </div>
+            <div class="w-31">
+                <b>檢查者：</b>{{ one.reviewer }}
+            </div>
+            <div class="w-32">
+                <b>審核者：</b>{{ one.inspector }}
+            </div>
+        </div>
+    </div>
+    <div v-else>
+        <p><b>需要改正事項：</b></p>
+        <div class="fx-s">
+            <p class="w-37"><b>建議：</b>...</p>
+            <p class="w-31"></p>
+            <p class="w-32"><b>日期：</b>...</p>
+        </div>
+        <div class="fx-s">
+            <div class="w-37"><b>報告者：</b>...</div>
+            <div class="w-31"><b>檢查者：</b>...</div>
+            <div class="w-32"><b>審核者：</b>...</div>
         </div>
     </div>
 </template>
@@ -32,6 +45,7 @@
 <script>
 export default {
     props: {
+        load: { type: Boolean },
         one: {
             type: Object,
             default() {

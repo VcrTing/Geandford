@@ -1,4 +1,4 @@
-import cost_statistic from '../../../screen/cost/cost_statistic/cost_statistic.vue'
+import cost_statistic from '../../../screen/project/cost_statistic/cost_statistic.vue'
 
 export default (head = '') => {
     return [

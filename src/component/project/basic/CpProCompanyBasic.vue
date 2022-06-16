@@ -19,16 +19,16 @@
             <span>manuflls-001;tst-001;</span>
         </p>
         <div class="fx-s">
-            <p :class="'w-' + wide[0]">
+            <div :class="'w-' + wide[0]">
                 <b>類別：</b>
                 <span>起重裝置</span>
-            </p>
-            <p :class="'w-' + wide[1]">
+            </div>
+            <div :class="'w-' + wide[1]">
                 <b>日期：</b>
                 <span>2022-12-12</span>
-            </p>
-            <p :class="'w-' + wide[2]">
-            </p>
+            </div>
+            <div :class="'w-' + wide[2]">
+            </div>
         </div>
     </div>
 </template>

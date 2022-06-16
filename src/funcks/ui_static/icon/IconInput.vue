@@ -1,5 +1,5 @@
 <template>
-    <i>
+    <i @click="$emit('tap')">
         <div v-if="name == 'time'" class="i-icing">
             <img src="../../../assets/icon/calendar.png">
         </div>

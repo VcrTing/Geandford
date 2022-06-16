@@ -2,10 +2,10 @@
     <div class="table"> 
         <dr-rr-dc-tr></dr-rr-dc-tr>
 
-        <ui-td-items-wrapper v-for="(m, j) in many" :key="j"
-            :index="null" :tit="m.name"
+        <ui-td-items-wrapper v-for="(m, j) in cc" :key="j"
+            :index="null" :tit="j"
         >
-            <dr-rr-dc-td  v-for="(v, i) in m.children" :key="i" :one="v"></dr-rr-dc-td>
+            <dr-rr-dc-td  v-for="(v, i) in m" :key="i" :one="v"></dr-rr-dc-td>
         </ui-td-items-wrapper>
     </div>
 </template>
@@ -18,6 +18,12 @@ import DrRrDcTr from './table/DrRrDcTr.vue'
 export default {
   components: { UiPageEmpty, DrRrDcTr, DrRrDcTd,
     UiTdItemsWrapper },
+    props: [ 'one' ],
+    computed: {
+        cc() {
+            return this.one.cc
+        }
+    },
     mounted() {
         this.fetching()
     },

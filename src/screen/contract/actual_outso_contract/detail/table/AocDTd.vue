@@ -1,7 +1,7 @@
 <template>
     <div class="td pl-ip_icon">
-        <div class="w-38">{{ one.name_ch }}</div>
-        <div class="w-32">{{ one.name_en }}</div>
+        <div class="w-38">{{ one.name }}</div>
+        <div class="w-32">{{ one.c_name }}</div>
         <div class="w-30">{{ one.phone }}</div>
     </div>
 </template>

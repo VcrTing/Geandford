@@ -11,9 +11,9 @@
                 <b>負責人：</b>{{ one.charge }}
             </p>
         </div>
-        <p>
+        <div>
             <b>事情簡介：</b><span>{{ one.message }}</span>
-        </p>
+        </div>
     </div>
 </template>
 

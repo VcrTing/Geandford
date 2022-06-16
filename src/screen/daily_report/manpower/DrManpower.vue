@@ -1,10 +1,15 @@
 <template>
     <layout-screen>
-        <layout-filter-def :_pahd="'輸入搜索內容'" :_timed="true" slot="bar"></layout-filter-def>
+        <iayout-filter-def 
+            :_pahd="'輸入項目名稱或工種名稱進行搜索'" :_timed_1="true"
+            :param_search="[ 'project.name_contains' , 'worker_type_contains' ]"
+            @sign="funni"
+            slot="bar"></iayout-filter-def>
+        
         <div slot="cont" class="w-100">
             <div class="table-iine">
                 <dr-mp-tr></dr-mp-tr>
-                <ui-page-empty :cls="''" :load="loading" :srcs="many">
+                <ui-page-empty  @res="(v) => many = v" :numone="iimit" :total="iong" :cls="''" :load="loading" :srcs="many_origin">
                     <dr-mp-td v-for="(v, i) in many" :key="i" :one="v"></dr-mp-td>
                 </ui-page-empty>
             </div>
@@ -13,35 +18,38 @@
 </template>
 
 <script>
-import LayoutFilterDef from '../../../funcks/ui_layout/filter/LayoutFilterDef.vue'
 import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.vue'
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
 import DrMpTd from './table/DrMpTd.vue'
 import DrMpTr from './table/DrMpTr.vue'
+import IayoutFilterDef from '../../../funcks/ui_layout/filter/IayoutFilterDef.vue'
 export default {
-  components: { LayoutScreen, LayoutFilterDef, DrMpTr, UiPageEmpty, DrMpTd },
-methods: {
-        pagenation(n, ong, limit) {
-
-        },
-        async fetching() {
+  components: { LayoutScreen, DrMpTr, UiPageEmpty, DrMpTd, IayoutFilterDef },
+    computed: {
+        pro() { return this.$store.state.project },
+        iong() { return this.many_origin.length },
+    },
+    methods: { 
+        async funni(fui = {}) {
             this.loading = true
-            setTimeout(e => this.loading = false, 2400)
+            fui['_limit'] = 300; fui['_sort'] = 'date:DESC'
+            await this.fetching(fui)
+            setTimeout(e => this.loading = false, 200)
+        },
+        async fetching(cond = { }) {
+            let res = await this.serv.worker.worker(this, this.pro.uid, cond)
+            try {
+                this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
+            } catch(err) { }
+            console.log('数据 =', res)
         },
     },
     data() {
         return {
-            loading: true, many: [
-                {
-                    id: 1, work_type: '油漆', hour: 40, num: 3, date: '2022-12-12'
-                },
-                {
-                    id: 1, work_type: '油漆', hour: 40, num: 3, date: '2022-12-12'
-                }
-            ],
+            loading: true, many: [ ],
+            many_origin: [ ], iimit: 30
         }
     },
-    async mounted() { this.fetching() }
 }
 </script>
 

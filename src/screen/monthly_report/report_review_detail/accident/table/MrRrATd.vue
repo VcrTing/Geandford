@@ -1,8 +1,8 @@
 <template>
-    <div class="td">
-        <div class="w-32">{{ one.kiii }}</div>
-        <div class="w-50">{{ one.accid }}</div>
-        <div class="w-18">{{ one.date }}</div>
+    <div class="td pl-ip_icon">
+        <div class="w-28">{{ one.injury_count }}</div>
+        <div class="w-30">{{ one.accident_count }}</div>
+        <div class="w-42">{{ one.date }}</div>
     </div>
 </template>
 

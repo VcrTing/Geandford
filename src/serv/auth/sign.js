@@ -6,7 +6,7 @@ const _in = async function(vue, dt) {
             const res = await vue.net.auth.login(dt.named, dt.pass)
             code = res.status
             user = Object.assign({
-                part: '文员', 
+                part: '管理員', 
                 avatar: 'https://img2.baidu.com/it/u=3474614069,3903854886&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500'
             }, res.data.user)
             vue.$store.commit('change', [ 'user', user ])

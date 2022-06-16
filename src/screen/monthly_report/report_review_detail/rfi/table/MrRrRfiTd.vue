@@ -1,5 +1,5 @@
 <template>
-    <div class="td">
+    <div class="td pl-ip_icon">
         <div class="w-28">{{ one.name }}</div>
         <div class="w-30">{{ one.phone }}</div>
         <div class="w-24">{{ one.phone }}</div>

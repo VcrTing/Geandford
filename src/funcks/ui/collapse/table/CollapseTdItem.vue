@@ -1,8 +1,11 @@
 <template>
     <nav class="collapse-item collapse-td-item" :class="{ 'collapse-active': open }">
-        <button class="fx-l" @click="self_change">
-            <icon-exp></icon-exp>
-            <slot name="tit"></slot>
+        <button @click="self_change">
+            <div class="fx-l">
+                <icon-exp></icon-exp>
+                <slot name="tit"></slot>
+            </div>
+            <slot name="extra"></slot>
         </button>
         <div :class="{ 'collapse-td-active': open }">
             <slot name="cont"></slot>

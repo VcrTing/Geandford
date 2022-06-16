@@ -119,8 +119,9 @@ select.ip-w-100,
         .cell:not(.blank):not(.disabled).day:hover, 
         .cell:not(.blank):not(.disabled).month:hover, 
         .cell:not(.blank):not(.disabled).year:hover
-            border: 1px solid $primary
-            background: none
+            transition: all .04s ease-in-out
+            border: 1px solid $primary_Thin
+            background: $primary_Thin
 
     .vdp-datepicker
         input
@@ -203,3 +204,5 @@ select.ip-w-100,
         @extend .bxs
         border-width: 0px !important
 
+
+// 搜索框

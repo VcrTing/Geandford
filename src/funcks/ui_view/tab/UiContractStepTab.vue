@@ -1,12 +1,12 @@
 <template>
-    <div class="fx-c">
+    <div class="fx-c mh-2em">
         <div class="fx-l" v-for="(v, i) in tabs" :key="i">
-            <div class="fx-l" @click="show(v.tab, i)">
+            <div class="fx-l hand" @click="show(v.tab, i)">
                 <button class="btn-tab"
-                    :class="{ 'btn-pri': actv(i), 'btn-die': !actv(i) }"
+                    :class="{ 'btn-pri': actv(v.tab), 'btn-die': !actv(v.tab) }"
                 ></button>
                 <span class="pl pri"
-                    :class="{ 'pri': actv(i), 'sus': !actv(i) }"
+                    :class="{ 'pri': actv(v.tab), 'sus': !actv(v.tab) }"
                 >{{ v.txt }}</span>
             </div>
             <div v-if="i < (tabs.length - 1)" class="px_x2">
@@ -14,22 +14,31 @@
             </div>
         </div>
     </div>
+    <!--div v-else class="mh-2em">
+        <loading :size="-1"></loading>
+    </div-->
 </template>
 
 <script>
+import Loading from '../shimmer/Loading.vue'
 export default {
+  components: { Loading },
+    props: [ 'def' ],
     methods: {
+        change(v) { this.now = v },
         show(tb, i) {
-            this.now = i
+            this.now = tb
             this.$emit('tab', tb)
         },
         actv(tb) { return this.now == tb }
     },
-    computed: {
+    watch: {
+        now(n, o) { this.ioad = true, setTimeout(e => this.ioad = false, 300) }
     },
+    mounted() { this.now = this.def ? this.def : 1 },
     data() {
         return {
-            now: 0,
+            now: 0, ioad: true,
             tabs: [
                 {
                     tab: 1, txt: '工程信息及相关人员'

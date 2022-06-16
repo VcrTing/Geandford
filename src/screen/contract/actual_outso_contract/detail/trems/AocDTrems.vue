@@ -1,19 +1,37 @@
 <template>
     <div>
         <h5 class="pb">合约条款</h5>
-        <div class="td-iin pl-ip_icon" v-for="(v, i) in many" :key="i">
-            <div>
-                搭棚架.pdf 
+        <div v-if="!_ioad">
+            <div v-if="one && one.contract_terms && one.contract_terms.length > 0">
+                <div class="td-iin pl-ip_icon" v-for="(v, i) in one.contract_terms" :key="i">
+                    <div>
+                        {{ v.name }}
+                    </div>
+                    <a :href="conf.baseURL + v.url">
+                        <ui-table-opera :_mode="2"></ui-table-opera>
+                    </a>
+                </div>
             </div>
-            <ui-table-opera :_mode="2"></ui-table-opera>
+            <ui-no-data v-else></ui-no-data>
         </div>
+        <loading v-else :size="0"></loading>
     </div>
 </template>
 
 <script>
 import UiTableOpera from '../../../../../funcks/ui_element/table/opera/UiTableOpera.vue'
+import Loading from '../../../../../funcks/ui_view/shimmer/Loading.vue'
+import UiNoData from '../../../../../funcks/ui_view/empty/UiNoData.vue'
 export default {
-  components: { UiTableOpera },
+  components: { UiTableOpera, Loading, UiNoData },
+    props: {
+        _ioad: {
+            type: Boolean
+        },
+        one: {
+            type: Object
+        }
+    },
     data() {
         return {
             loading: true,

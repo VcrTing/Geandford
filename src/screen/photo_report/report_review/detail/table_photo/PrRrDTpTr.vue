@@ -4,13 +4,13 @@
             
         </div>
         <div class="w-4"></div>
-        <div class="w-30">
+        <div class="w-31">
             名稱
         </div>
-        <div class="w-36">
+        <div class="w-28">
             備註
         </div>
-        <div class="w-13">
+        <div class="w-20">
             日期
         </div>
         <div class="w-11">

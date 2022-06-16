@@ -7,7 +7,7 @@
         </div>
         <div class="menu-bg" @click="close"></div>
         <div class="content">
-            <div class="top">
+            <div class="top fx-s">
                 <slot name="top"></slot>
             </div>
             <div class="center">

@@ -1,5 +1,5 @@
 <template>
-    <nav class="fx-s px_x2">
+    <nav class="fx-s px_x2 w-100">
         <div class="w-70">
             <span class="hand view-p" @click="menu(1)">
                 MENU

@@ -13,7 +13,7 @@ export default {
     methods: {
         check() {
             const u = this.user
-            if (u.id && u.email) { console.log(this.user, '已登录') } else { this.go('/login') }
+            if (u.id && u.email) { } else { this.go('/login') }
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="tr">
+    <div class="tr pl-ip_icon">
         <div class="w-28">姓名</div>
         <div class="w-30">郵箱</div>
         <div class="w-24">電話</div>

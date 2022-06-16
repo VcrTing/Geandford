@@ -1,16 +1,18 @@
 <template>
     <layout-screen>
-        <layout-filter-period slot="bar"></layout-filter-period>
+        <iayout-filter-def 
+            :_pahd="'輸入概述或天氣進行搜索'" :_timed_1="true"
+            :param_search="[ 'description_contains' , 'weather_contains' ]"
+            @sign="funni"
+            slot="bar"></iayout-filter-def>
 
         <nav slot="cont" class="w-100 ">
-            <div class="table">
-                <dr-rr-tr></dr-rr-tr>
+            <div class="table-iine">
+                <dr-rr-tr :srcs="many_origin" @sort="(v) => many_origin = v"></dr-rr-tr>
 
-                <ui-page-empty @change="pagenation" :load="loading" :srcs="many">
-                    <ui-td-items-wrapper v-for="(m, j) in many" :key="j"
-                        :index="j" :tit="'報告'" :plus="'添加物品'">
-                        <dr-rr-td v-for="(v, i) in m.children" :key="i" :one="v"></dr-rr-td>
-                    </ui-td-items-wrapper>
+                <ui-page-empty @res="(v) => many = v" :numone="iimit" :total="iong" 
+                    :load="loading" :srcs="many_origin">
+                    <dr-rr-td v-for="(v, i) in many" :key="i" :one="v"></dr-rr-td>
                 </ui-page-empty>
             </div>
         </nav>
@@ -23,26 +25,34 @@ import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.v
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
 import DrRrTd from './table/DrRrTd.vue'
 import DrRrTr from './table/DrRrTr.vue'
-import LayoutFilterPeriod from '../../../funcks/ui_layout/filter/LayoutFilterPeriod.vue'
+import IayoutFilterDef from '../../../funcks/ui_layout/filter/IayoutFilterDef.vue'
 export default {
-  components: { LayoutScreen, DrRrTr, UiPageEmpty, UiTdItemsWrapper, DrRrTd, LayoutFilterPeriod },
-    methods: {
-        pagenation(n, ong, limit) {
-
-        },
-        async fetching() {
+  components: { LayoutScreen, DrRrTr, UiPageEmpty, UiTdItemsWrapper, DrRrTd, IayoutFilterDef },
+    computed: {
+        pro() { return this.$store.state.project },
+        iong() { return this.many_origin.length },
+    },
+    methods: { 
+        async funni(fui = {}) {
             this.loading = true
-            setTimeout(e => this.loading = false, 2400)
+            fui['_limit'] = 300; fui['_sort'] = 'date:DESC'
+            await this.fetching(fui)
+            setTimeout(e => this.loading = false, 200)
+        },
+        async fetching(cond = { }) {
+            let res = await this.serv.daily.daily_report(this, this.pro.uid, cond)
+            try {
+                this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
+            } catch(err) { }
+            console.log('数据 daily_report =', res)
         },
     },
     data() {
         return {
-            loading: true, many: [ { children: [ {
-                name: '客房地板施工', uid: 'manfulls-001;tst-002;00001', date: '2022-12-12 12:12', status: false
-            }]} ],
+            loading: true, many: [ ],
+            many_origin: [ ], iimit: 30
         }
     },
-    async mounted() { this.fetching() }
 }
 </script>
 

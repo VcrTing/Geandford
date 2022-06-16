@@ -1,20 +1,24 @@
 <template>
-    <div class="card-work">
+    <div class="card-work card-damage">
         <div class="fx-l pb_x pt_s">
             <div class="btn-pri_thin i-big fx-c">
-                图
+                <icon-damage :_name="name"></icon-damage>
             </div>
-            <h5 class="pl_x">{{ head }}</h5>
+            <h5 class="pl_x">
+                <span v-if="name == 'accident'">傷害報告</span>
+                <span v-if="name == 'damage'">第三方財產和公用設施損壞報告</span>
+                <span v-if="name == 'hazardous_incident'">危險事件報告</span>
+            </h5>
         </div>
         <hr/>
         <div class="fx-c px_x2 py_x2">
-            <div class="t-c px" v-for="(v, i) in many" :key="i">
+            <div class="t-c px upper" v-for="(v, i) in many" :key="i">
                 <div class="h1">
                     {{ v.num }}
                 </div>
-                <span class="sus">
+                <div class="mh-3em sus">
                     {{ v.txt }}
-                </span>
+                </div>
             </div>
         </div>
         <div class="t-r">
@@ -24,10 +28,11 @@
 </template>
 
 <script>
+import IconDamage from '../../../ui_static/icon/IconDamage.vue'
 import CardConstructionWork from '../construction/CardConstructionWork.vue'
 export default {
-  components: { CardConstructionWork },
-  props: [ 'head', 'icon', 'many' ]
+  components: { CardConstructionWork, IconDamage },
+  props: [ 'name', 'many' ]
 
 }                  
 </script>                     

@@ -26,7 +26,7 @@ const ADMIN_ROOT = '/admin'
 
 const AllRoutes = [
     {
-      path: ADMIN_ROOT, component: Home, redirect: ADMIN_ROOT + '/dashboard',
+      path: ADMIN_ROOT, component: Home, redirect: ADMIN_ROOT + '/cost_statistic',
       children: [
         ...daily(ADMIN_ROOT + '/daily_report'),
         ...weekly(ADMIN_ROOT + '/weekly_report'),

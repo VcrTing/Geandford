@@ -54,13 +54,16 @@ $pgW: 2.6em
     li:last-child,
     li:first-child
         opacity: 0.8
+        margin: 0px $ds
     .active
-        color: #FFFFFFEF
-        background: $primary_Hover
-        // border-color: $primary_Hover
+        color: $primary // #FFFFFFEF
+        font-weight: bolder
+        background: $primary_Thin
+        border-color: $primary_Thin
         &:hover
             color: #FFFFFFC0
             background: $primary
+            border-color: $primary
 
 .ul-pagenation li,
 .pagenation input,
@@ -97,3 +100,9 @@ $pgW: 2.6em
         color: $tit
         background: $bg_s
     
+.ister
+    @extend .fx-l
+    @extend .fx-wp
+    li
+        display: inline-block
+        margin-bottom: $ds

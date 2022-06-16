@@ -44,12 +44,9 @@ export default {
                     txt: '表格下載', icon: '',
                     index: 1, link: null,
                     children: [
-                        {   txt: '常用表格', icon: '',
-                            index: 10, link: '/admin/table_download/td_often', },
-                        {   txt: '進度報告', icon: '',
-                            index: 11, link: '/admin/table_download/td_progress', },
-                        {   txt: '執行報告', icon: '',
-                            index: 12, link: '/admin/table_download/td_perform', }
+                        {   txt: '常用表格', icon: '', index: 10, link: '/admin/table_download/often', },
+                        {   txt: '進度報告', icon: '', index: 11, link: '/admin/table_download/progress', },
+                        {   txt: '執行報告', icon: '', index: 12, link: '/admin/table_download/perform', }
                     ]
                 },
                 {
@@ -80,7 +77,7 @@ export default {
                     ] },
 
                 {   txt: '周報表', icon: '',
-                    index: 4, link: '/admin/weekly_report/weekly_report_detail' },
+                    index: 4, link: '/admin/weekly_report' },
                 // {   txt: '文件庫', icon: '', index: 5, link: '/admin/dashboard/' },
                 // {   txt: '缺陷整改', icon: '', index: 6, link: '/admin/repair_defects/' },
                 {   txt: '相片報告', icon: '',
@@ -90,12 +87,12 @@ export default {
                             index: 71, link: '/admin/photo_report/photo_report_review' },
                         // {   txt: '相關收件人', icon: '', index: 72, link: '/admin/dashboard/' },
                     ]},
-                // {   txt: '物料', icon: '', index: 11, link: '/admin/material/' },
+                {   txt: '物料', icon: '', index: 11, link: '/admin/material' },
                 {
                     txt: '人員', icon: '',
                     index: 12, link: null,
                     children: [
-                        {   txt: '協作人員', icon: '',
+                        {   txt: '協作人士', icon: '',
                             index: 121, link: '/admin/member_coopera' },
                         // {   txt: '相關收件人', icon: '', index: 122, link: '/admin/dashboard/' },
                     ]

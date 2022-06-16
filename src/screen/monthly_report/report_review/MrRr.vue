@@ -1,10 +1,14 @@
 <template>
     <layout-screen>
-        <layout-filter-full class="mt-0" slot="bar"></layout-filter-full>
+        <iayout-filter-def 
+            :_pahd="'輸入編號進行搜索'" :_timed_1="true"
+            :param_search="[ 'uid_contains' ]"
+            @sign="funni"
+            slot="bar"></iayout-filter-def>
         <div slot="cont" class="w-100">
             <div class="table-iine">
                 <mr-rr-tr></mr-rr-tr>
-                <ui-page-empty :load="loading" :srcs="many">
+                <ui-page-empty @res="(v) => many = v" :numone="iimit" :total="iong" :load="loading" :srcs="many_origin">
                     <mr-rr-td v-for="(v, i) in many" :key="i" :one="v"></mr-rr-td>
                 </ui-page-empty>
             </div>
@@ -13,34 +17,40 @@
 </template>
 
 <script>
-import LayoutFilterFull from '../../../funcks/ui_layout/filter/LayoutFilterFull.vue'
 import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.vue'
 import PanelDef from '../../../funcks/ui/panel/PanelDef.vue'
 import MrRrTr from './table/MrRrTr.vue'
 import MrRrTd from './table/MrRrTd.vue'
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
+import IayoutFilterDef from '../../../funcks/ui_layout/filter/IayoutFilterDef.vue'
 
 export default {
-    components: { LayoutScreen, LayoutFilterFull, PanelDef, MrRrTr, UiPageEmpty, MrRrTd },
-    
-    methods: {
-        async fetching() {
-            this.loading = true
-            setTimeout(e => this.loading = false, 500)
-        }
+    components: { LayoutScreen, PanelDef, MrRrTr, UiPageEmpty, MrRrTd, IayoutFilterDef },
+    computed: {
+        pro() { return this.$store.state.project },
+        iong() { return this.many_origin.length },
     },
-    mounted() { this.fetching() },
+    methods: { 
+        async funni(fui = {}) {
+            this.loading = true
+            fui['_limit'] = 300; fui['_sort'] = 'date:DESC'
+            await this.fetching(fui)
+            setTimeout(e => this.loading = false, 200)
+        },
+        async fetching(cond = { }) {
+            let res = await this.serv.monthly.monthly_report(this, this.pro.uid, cond)
+            try {
+                this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
+            } catch(err) { }
+            console.log('数据 report_review =', res)
+        },
+    },
     data() {
         return {
-            loading: true, 
-            many: [ 
-                    {
-                        name: '大型项目', uid: 'uid-00001;ss-0001', name_cbs: '王总', month: '2022-12', id: 1 }, 
-                    { 
-                        name: '大型项目', uid: 'uid-00001;ss-0001', name_cbs: '王总', month: '2022-12', id: 2 }
-                ]
+            loading: true, many: [ ],
+            many_origin: [ ], iimit: 30
         }
-    }
+    },
 }
 </script>
 

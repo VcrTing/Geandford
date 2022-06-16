@@ -1,15 +1,14 @@
 
 $tb-br: #dedede
 $td-br: #A3AED028
-$td-br_x2: #A3AED062
+$td-br_x2: #A3AED078
 
 ._tr
     @extend .h6
     font-weight: bold
 
 
-.table,
-.table-hot
+.table
     @extend .upper
     .tr,
     .td
@@ -27,68 +26,32 @@ $td-br_x2: #A3AED062
         padding: $ds_s $ds_x2
         .td-in
             padding: 1em 0
-            border-top: 1px solid $tb-br
+            // border-top: 1px solid $tb-br
 
     .td-empty
         min-height: 5em
-        border-top: 1px solid $tb-br
+        // border-top: 1px solid $tb-br
 
 //
-.td-collsp
-    @extend .bxs
-    background: #FFF
-    margin-bottom: 0.82em
-    .td-collsp-sub,
-    .collapse-td-item > button
-        @extend .mh
-        padding: $ds $ds_x2
-    .td
-        margin-bottom: 0px
-    .td-collsp-td
-        border: none
-        padding: $ds_n 0
+.td-item-wrapper
+    padding-bottom: $ds
+    *
+        margin: 0
+        box-shadow: none
+    .collapse
+        background: #FFF
+        @extend .br
+        @extend .bxs
+    .collapse-item
+        & > button,
+            padding: $ds_s $ds_x2
+    .tiw-td
+        overflow: hidden
         border-top: 1px solid $td-br
-        // border-bottom: 1px solid $td-br
-    .td-collsp-sub
-        @extend .pl-ip_icon
-        color: $sub
-
-.table-line
-    tr
-        padding-bottom: $ds_s
-    nav
-        padding: $ds_s 0
-        border: none
-        border-bottom: 1px solid $cold_Br2
-
-// table-hot
-.table-hot
-    .tr
-        color: $sus
-    .td
-        min-height: 36px
-        border-top: 1px solid $tb-br
-    .td:last-child
-        // border-color: transparent
-
-
-//   
-.table-witty
-    // overflow: hidden
-    border: 1px solid $tb-br
-    .tr
-        padding: $ds 0
-        min-height: 36px
-        background: $def_x2
-    .td
-        padding: $ds_x 0
-        border-bottom: 1px solid $tb-br
-    .tr,
-    .td,
-    .td-pr
-        padding-left: 2.6vw
-    .td:last-child
-        border: none
+        border-bottom-left-radius: $br
+        border-bottom-right-radius: $br
+        .td:last-child
+            border-color: transparent !important
 
 .td-pr
     & > div
@@ -106,71 +69,6 @@ $td-br_x2: #A3AED062
         opacity: 0.2
         transform: translateY(24px)
 
-// 添加
-.btn-tb-plus
-    width: 100%
-    padding: $ds_n $ds
-    border: 1px dashed $ip-br_x2
-    &:hover
-        background: $def_t
-        // color: $primary
-        // border-color: $primary
-.btn-tb-plus_active
-    transition: all .362s ease-in
-    border-color: transparent
-    border-top-color: $ip-br_x2
-
-
-// OPERA
-.tb-opera
-    color: $sus
-    button:hover
-        color: $tit
-
-.table-inn
-    @extend .table
-    & > nav
-        @extend .br
-        @extend .bxs
-        padding: 0 0
-        & > div
-            @extend .br
-
-    .td
-        padding: $ds $ds_x2
-        border-bottom: 1px solid $td-br_x2
-    .td:last-child
-        border-bottom-color: transparent !important
-
-
-.table-iine
-    @extend .table
-    padding-bottom: $ds
-    .td-wrapper
-        @extend .bxs
-        @extend .br
-        padding: 0 0 0
-        overflow: hidden
-        margin-bottom: 0px !important
-    .td
-        padding: $ds $ds_x2
-        border-bottom: 1px solid $td-br_x2
-    .td:last-child
-        border-bottom-color: transparent !important
-
-
-.tr-iin,
-.td-iin
-    border-radius: $br
-    @extend .fx-s
-    @extend .bxs_inn
-    padding: $ds $ds_x2
-    margin-bottom: $ds_s
-    & > div
-        min-height: 2px
-.tr-iin
-    @extend ._tr
-    margin-bottom: $ds
 
 .table-photo
     @extend .br
@@ -184,3 +82,5 @@ $td-br_x2: #A3AED062
         .img
             width: 100%
             padding-bottom: 100%
+
+

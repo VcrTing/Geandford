@@ -2,24 +2,26 @@
     <div class="td-iin td-photo">
         <div class="w-6">
             <div class="img" :style="{
-                'background-image': 'url(' + one.img + ')',
+                'background-image': 'url(' + conf.baseURL + one.image.url + ')',
                 'background-size': 'cover'
             }">
 
             </div>
         </div>
         <div class="w-4"></div>
-        <div class="w-30">
-            {{ one.name }}
+        <div class="w-31">
+            {{ one.image.name }}
         </div>
-        <div class="w-36">
-            {{ one.remark }}
+        <div class="w-28">
+            {{ one.description }}
         </div>
-        <div class="w-13">
-            {{ one.date }}
+        <div class="w-20">
+            {{ view.ser_timed(one.image.updated_at, false, true) }}
         </div>
         <div class="w-11 t-r">
-            <ui-table-opera @view="go('')" :_mode="2"></ui-table-opera>
+            <a target="_blank" :href="conf.baseURL + one.image.url" :download="one.uid + '_' + one.image.name">
+                <ui-table-opera :_mode="2"></ui-table-opera>
+            </a>
         </div>
     </div>
 </template>

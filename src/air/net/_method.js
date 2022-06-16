@@ -22,22 +22,15 @@ const get = async function(uri, token, data){
 */
 
 const get = async function( uri, token, data, cdt = '' ) {
-    const url = conf.API + conf.ENDPOINT[ uri ] + '/' + cdt
-
-    let res = await axios.get(url, {
-        params: data,
-        headers: tool.headers(token)
-    })
+    const url = conf.API + conf.ENDPOINT[ uri ] + '/' + cdt + tool.param( data )
+    console.log('GET URL =', url)
+    let res = await axios.get(url, { headers: tool.headers(token) })
     return res && res.status == 200 ? res.data : [ ]
 }
 
-const get_one = async function( uri, cdt, token, data ) {
+const get_one = async function( uri, cdt, token, data = {} ) {
     const url = conf.API + conf.ENDPOINT[ uri ] + '/' + cdt
-
-    let res = await axios.get(url, {
-        params: data,
-        headers: tool.headers(token)
-    })
+    let res = await axios.get(url, { headers: tool.headers(token) })
     return res && res.status == 200 ? res.data : [ ]
 }
 

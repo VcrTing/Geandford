@@ -44,7 +44,6 @@ export default {
     },
     computed: {
         _head() { 
-            console.log('rt =', this.rt)
             return this.txts ? this.txts[ this.rt ] : '' },
         
         rt() { return this.$route.path.split('/').filter(e => e != '').pop() },

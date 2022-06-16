@@ -1,5 +1,6 @@
 
 $spi_s: 1.5em
+$spi_m: 3.4em
 $spi: calc( 36px + 3vw )
 $spi_x2: calc( 36px + 3vw )
 
@@ -24,6 +25,19 @@ $spi_x2: calc( 36px + 3vw )
       width: 8%
       height: 100%
       margin: 0px 5%
+
+.loading_m
+  width: 100%
+  min-height: $spi_m * 1.5
+  @extend .fx-c
+  .spinner
+    width: $spi_m * 1.5
+    height: $spi_m
+    margin: 0
+    & > div
+      width: 8%
+      height: 100%
+      margin: 0px 4%
 
 
 .spinner > div 

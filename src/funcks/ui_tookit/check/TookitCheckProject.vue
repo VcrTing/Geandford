@@ -17,14 +17,14 @@ export default {
             if (id && id !== 0) {
                 const res = await this.serv.project.one(this, id, { })
                 this.$store.commit('change', [ 'project', res ])
-                console.log('当前项目 =', res)
+                // console.log('当前项目 =', res)
             }
         },
 
         check() {
             const _id = sessionStorage.getItem('gendford_project_id')
             if (!_id || _id == 0) { this.go('/project') } else {
-                console.log('已选取 项目')
+                // console.log('已选取 项目')
             }
         }
     }

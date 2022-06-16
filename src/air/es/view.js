@@ -1,3 +1,4 @@
+import sort from './backend/sort'
 
 import timed from './timed/ser_timed'
 import float from './num/float'
@@ -9,7 +10,10 @@ const first_Max = function(rec) {
 
 export default {
     timed,
+    now: timed.now,
     ser_timed: timed.ser_timed,
+
+    sort,
     float,
     strapi,
 

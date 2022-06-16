@@ -1,19 +1,17 @@
 
-import weekly_report from '../../../screen/weekly_report/weekly_report.vue'
 
-import WeeklyReport from '../../../screen/weekly_report/weekly_report/WeeklyReport.vue'
+import WrWr from '../../../screen/weekly_report/weekly_report/WrWr.vue'
+import WrWrD from '../../../screen/weekly_report/weekly_report/detail/WrWrD.vue'
 
 export default (head = '') => {
     return [
         {
             path: head,
-            component: weekly_report,
-            children: [
-                {
-                    path: head + '/weekly_report_detail',
-                    component: WeeklyReport
-                },
-            ]
-        }
+            component: WrWr,
+        },
+        {
+            path: head + '/weekly_report_detail',
+            component: WrWrD
+        },
     ]
 }

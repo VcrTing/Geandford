@@ -2,18 +2,18 @@
     <div class="">
         <div class="fx-s">
             <p class="w-37">
-                <b>工種：</b>油漆
+                <b>工種：</b>{{ one.worker_type }}
             </p>
             <p class="w-31">
-                <b>總工作時數（/hr）：</b>50
+                <b>總工作時數（/hr）：</b>{{ one.work_hour }}
             </p>
             <p class="w-32"> 
-                <b>人員數量：</b>5
+                <b>人員數量：</b>{{ one.worker_number }}
             </p>
         </div>
-        <p>
-            <b>日期：</b>2022-12-12
-        </p>
+        <div>
+            <b>日期：</b><span>{{ one.date }}</span>
+        </div>
     </div>
 </template>
 

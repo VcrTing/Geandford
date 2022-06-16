@@ -21,7 +21,7 @@ import VuejsDatepicker from 'vuejs-datepicker'
 			},
             pahd: {
                 type: String,
-                default: 'Please select'
+                default: '請選擇日期'
             }
 		},
 		components: { VuejsDatepicker },

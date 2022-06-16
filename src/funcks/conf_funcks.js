@@ -1,11 +1,24 @@
-const _COMM = {
+const _OTHER = {
     'report_review': '報告預覽',
-    'weekly_report': '周報表',
-    'daily_report': '日報表',
-    'monthly_report': '月報表',
+    
+    'cost_statistic': '工程支出',
+
+    'contract': '施工合約',
+    'contracts_view': '合約列表',
+
+    'material': '物料',
+    'material_view': '物料列表',
+
+    'expect_outso_contract': '預計外判合約',
+    'actual_outso_contract': '實際外判合約',
+    'actual_outso_contract_detail': '詳情',
 }
 
 const _REPORT = {
+    'weekly_report': '周報表',
+    'daily_report': '日報表',
+    'monthly_report': '月報表',
+
     // 日
     'man_power': '人力',
     'infi_factor': '影響因素',
@@ -34,17 +47,17 @@ const _REPORT = {
 
 const _MEMBER = {
     'member': '成員',
-    'member_coopera': '協作人員',
+    'member_coopera': '協作人士',
 }
 const _TIT = {
 
     'table_download': '表格下載',
-    'td_often': '常用表格',
-    'td_perform': '執行報告',
-    'td_progress': '進度報告',
-
-    'material': '物料',
-    'material_view': '物料列表',
+    'often': '常用表格',
+    'often_detail': '詳情',
+    'perform': '執行報告',
+    'perform_detail': '詳情',
+    'progress': '進度報告',
+    'progress_detail': '詳情',
 
     'photo_report': '相片報告',
     'photo_report_review': '報告預覽',
@@ -52,17 +65,8 @@ const _TIT = {
 
     'repair_defects': '缺陷整改',
     'repair_defects_view': '整改列表',
-
-    'contract': '施工合約',
-    'contracts_view': '合約列表',
-
-    'cost_statistic': '工程支出',
-    'expect_outso_contract': '預計外判合約',
-    'actual_outso_contract': '實際外判合約',
-    'actual_outso_contract_detail': '詳情'
-
 }
 
 module.exports = {
-    TIT: Object.assign(_TIT, _MEMBER, _REPORT, _COMM)
+    TIT: Object.assign(_TIT, _MEMBER, _REPORT, _OTHER)
 }

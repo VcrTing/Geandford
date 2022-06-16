@@ -1,0 +1,67 @@
+
+// OPERA
+.tb-opera
+    @extend .fx-c
+    @extend .pri_son
+    &:hover *
+        color: $primary_Hover !important
+
+// BORDER
+.td
+    border-bottom: 0.8px solid $td-br_x2
+    & > div
+        padding-right: $ds
+    & > div:last-child
+        padding-right: 0px 
+.td-in, 
+.td-empty
+    border-top: 0.8px solid $tb-br
+.td,
+.td-in, 
+.td-empty
+    border-width: 0.7px
+    
+// TABLE
+.table-iine,
+.table-iine-in
+    @extend .br
+    @extend .table
+    margin-bottom: $ds
+    .td-wrapper
+        @extend .bxs
+        @extend .br
+        padding: 0 0 0
+        overflow: hidden
+        margin-bottom: 0px !important
+    .td-wrapper .td:last-child,
+    .td:last-child
+        border-bottom-color: transparent !important
+        border: none !important
+    .td
+        padding: $ds $ds_x2
+        &:hover
+    .exp-td
+        border-bottom: 0.8px solid $td-br_x2
+        td
+            border: none
+    .exp-td:last-child
+        border: none
+
+.table-iine-in
+    .tr,
+    .td-wrapper
+        @extend .bxs_inn
+
+
+.tr-iin,
+.td-iin
+    border-radius: $br
+    @extend .fx-s
+    @extend .bxs_inn
+    padding: $ds $ds_x2
+    margin-bottom: $ds_s
+    & > div
+        min-height: 2px
+.tr-iin
+    @extend ._tr
+    margin-bottom: $ds

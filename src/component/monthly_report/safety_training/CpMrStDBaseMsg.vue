@@ -1,18 +1,24 @@
 <template>
-    <div class="fx-s">
-        <p class="w-37">
-            <b>承包商名稱：</b>{{ one.company_name }}
-        </p>
-        <p class="w-31">
-            <b>項目名稱：</b>{{ one.project_name }}
-        </p>
-        <p class="w-32"></p>
+    <div class="fx-s" v-if="!load">
+        <div class="w-45">
+            <b>參考編號：</b>{{ one.uid }}
+        </div>
+        <div class="w-65">
+            <b>項目名稱：</b>{{ one.project.name }}
+        </div>
+    </div>
+    <div class="fx-s" v-else>
+        <div class="w-45"><b>參考編號：</b>...</div>
+        <div class="w-65"><b>項目名稱：</b>...</div>
     </div>
 </template>
 
 <script>
+import Loading from '../../../funcks/ui_view/shimmer/Loading.vue'
 export default {
+  components: { Loading },
     props: {
+        load: { type: Boolean },
         one: {
             type: Object,
             default() {

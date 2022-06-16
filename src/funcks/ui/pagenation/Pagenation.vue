@@ -41,7 +41,7 @@ export default {
     props: {
         count: {
             type: Number,
-            default: 200
+            default: 10
         },
         _key: {
             type: String,
@@ -57,7 +57,7 @@ export default {
         },
         _big: {
             type: Boolean,
-            default: true
+            default: false
         }
     },
     mounted() { this.sign() },
@@ -127,8 +127,9 @@ export default {
         reset() { this.now = 1 },
         // 發送 頁碼變動信號
         sign() {
-            const n = this.now < 1 ? this.now : 1
-            this.$emit('change', n, n * this.limit, this.limit)
+            const n = this.now > 1 ? this.now : 1
+            let st = (n - 1) * this.limit
+            this.$emit('change', n, st, this.limit)
         },
 
         // 保存壹般設置

@@ -1,6 +1,9 @@
 <template>
     <layout-screen>
-        <layout-filter-full slot="bar"></layout-filter-full>
+        <iayout-filter-full 
+            :mode="2" :param_time_1="'date_lte'"
+            @sign="funni"
+            slot="bar"></iayout-filter-full>
 
         <div slot="cont" class="w-100">
             <panel-def :head="'基本信息'">
@@ -8,9 +11,9 @@
             </panel-def>
             <h4 class="pt_s pb">合同資料</h4>
 
-            <ui-page-empty :is_page="false" :load="loading" :srcs="many">
-                <div class="row_x2 f-row">
-                    <div class="w-333" v-for="(v, i) in many" :key="i">
+            <ui-page-empty @res="(v) => many = v" :numone="iimit" :total="iong" :is_page="false" :load="loading" :srcs="many_origin">
+                <div class="row_x2 f-row ">
+                    <div class="w-333 w-25-x" v-for="(v, i) in many_origin" :key="i">
                         <card-outso-contract :one="v" class=""></card-outso-contract>
                     </div>
                 </div>
@@ -20,44 +23,52 @@
 </template>
 
 <script>
-import LayoutFilterFull from '../../../funcks/ui_layout/filter/LayoutFilterFull.vue'
 import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.vue'
 import PanelDef from '../../../funcks/ui/panel/PanelDef.vue'
 import CpExpectOutsoBaseMsg from '../../../component/contract/expect/CpExpectOutsoBaseMsg.vue'
 import CardOutsoContract from '../../../funcks/ui/card/contract/CardOutsoContract.vue'
 import UiPageEmpty from '../../../funcks/ui_view/empty/UiPageEmpty.vue'
+import IayoutFilterFull from '../../../funcks/ui_layout/filter/IayoutFilterFull.vue'
+
 export default {
     components: {
-    LayoutScreen,
-    LayoutFilterFull,
-    PanelDef,
-    CpExpectOutsoBaseMsg,
-    CardOutsoContract,
-    UiPageEmpty
-},
-    methods: {
-        async fetching() {
-            this.loading = true
-            setTimeout(e => this.loading = false, 500)
-        },
+        LayoutScreen,
+        PanelDef,
+        CpExpectOutsoBaseMsg,
+        CardOutsoContract,
+        UiPageEmpty,
+        IayoutFilterFull
     },
-    mounted() {
-        this.fetching()
+    computed: {
+        pro() { return this.$store.state.project },
+        iong() { return this.many_origin.length },
+    },
+    methods: {
+        async funni(fui = {}) {
+            this.loading = true
+            fui['_limit'] = 300; fui['_sort'] = 'date:DESC'
+            await this.fetching(fui)
+            setTimeout(e => this.loading = false, 200)
+        },
+        async fetching(cond = { }) {
+            let res = await this.serv.contract.tender(this, this.pro.uid, cond)
+            try {
+                this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
+            } catch(err) { }
+            console.log('数据 =', res)
+        },
     },
     data() {
         return {
             loading: true, many: [
-                { tit: '搭棚架', company: { name: 'Eric', charge: 'Eric', phone: '+888 999999' },
-                    expect_date: '2022-12-12', finished_date: '2022-12-12',
-                    expect_start: '2022-12-12', expected_finish: '2022-12-12',
-                    remark: '延時開始價格降低'
-                }
-            ]
+                
+            ], many_origin: [ ], iimit: 30
         }
     }
 }
 </script>
 
-<style>
-
+<style lang="sass">
+.f-row
+    justify-content: left !important
 </style>

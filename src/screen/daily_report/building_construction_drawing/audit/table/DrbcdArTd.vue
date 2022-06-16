@@ -7,7 +7,7 @@
             {{ one.email }}
         </div>
         <div class="w-26">
-            {{ one.phone }}
+            {{ one.phone ? one.phone : '(未記錄)' }}
         </div>
     </div>
 </template>

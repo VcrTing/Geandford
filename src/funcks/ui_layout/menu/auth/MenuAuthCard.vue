@@ -5,9 +5,9 @@
         </nav>
 
         <div class="fx-s">
-            <img class="img round w-33" :src="user.avatar">
-            <div class="w-67 pl_x">
-                <div class="pb_t">{{ user.username }}</div>
+            <!--img class="img round w-33" :src="user.avatar"-->
+            <div class="w-67 pl_s">
+                <div class="pb_s t-cap b">{{ user.username }}</div>
                 <span class="sus">{{ user.part }}</span>
             </div>
         </div>

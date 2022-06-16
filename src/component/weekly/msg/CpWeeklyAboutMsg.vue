@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p><b>巡查人士：</b>Cody Fisher</p>
+        <div><b>巡查人士：</b>Cody Fisher</div>
     </div>
 </template>
 

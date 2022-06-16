@@ -58,6 +58,8 @@ $couter_hr: #989999
 
 
 .fiiter-bar
+    padding: 0
+    margin: 0
     @extend .fx-s
 
     .fb-opera
@@ -80,3 +82,19 @@ $couter_hr: #989999
 
     .input
         border-color: transparent
+
+
+@media screen and ( max-width: 1082px )
+    .fiiter-bar
+        flex-wrap: wrap
+        .fb-many
+            width: 100%
+            & > div
+                flex-wrap: wrap
+            & > div,
+            .input
+                width: 100% !important
+        .fb-opera
+            width: 100%
+            padding-top: $ds_x2
+            justify-content: start

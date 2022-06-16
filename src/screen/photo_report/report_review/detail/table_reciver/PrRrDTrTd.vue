@@ -10,7 +10,7 @@
             {{ one.phone }}
         </div>
         <div class="w-16">
-            {{ one.type }}
+            {{ one.job_function }}
         </div>
     </div>
 </template>
@@ -18,7 +18,7 @@
 <script>
 export default {
     props: {
-        one : {
+        one: {
             type: Object
         }
     }

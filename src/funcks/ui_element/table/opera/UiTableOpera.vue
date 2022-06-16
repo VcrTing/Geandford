@@ -1,16 +1,20 @@
 <template>
-    <nav class="fx-c tb-opera" v-if="!_mode">
-        <button @click="view">檢視</button>
-    </nav>
-    <nav class="fx-c tb-opera pri_son" v-else-if="_mode == 2">
-        <button @click="view">下載</button>
-    </nav>
-    <nav class="fx-c tb-opera pri_son" v-else-if="_mode == 3">
+    <nav class="tb-opera" v-if="!_mode">
         <!-- 絕對單獨的 詳情 字眼 -->
-        <button @click="view">詳情</button>
+        <button class="btn-td_opera" @click="view">
+            <span>詳情</span>
+        </button>
     </nav>
-    <nav v-else class="fx-c tb-opera">
-        <button @click="edit">編輯</button>
+    <nav class="tb-opera" v-else-if="_mode == 2">
+        <button class="btn-td_opera" @click="view">
+            <span>下載</span>
+        </button>
+    </nav>
+    <nav class="tb-opera" v-else>
+        <!-- 絕對單獨的 詳情 字眼 -->
+        <button class="btn-td_opera" @click="view">
+            <span>詳情</span>
+        </button>
     </nav>
 </template>
 <script>

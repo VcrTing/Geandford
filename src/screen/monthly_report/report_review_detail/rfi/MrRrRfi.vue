@@ -1,9 +1,10 @@
 <template>
-    <div>
-        <div class="table-inn">
+    <div class="">
+        <div class="pt_x2 pb_x">相關提示：<view-send-tip-type :iist="send_iist"></view-send-tip-type></div>
+        <div class="table-iine-in">
             <mr-rr-rfi-tr></mr-rr-rfi-tr>
-            <ui-page-empty :is_page="false" :load="loading" :srcs="many">
-                <mr-rr-rfi-td :one="v" v-for="(v, i) in many" :key="i"></mr-rr-rfi-td>
+            <ui-page-empty :ioad_size="0" :is_page="false" :load="false" :srcs="contact">
+                <mr-rr-rfi-td :one="v" v-for="(v, i) in contact" :key="i"></mr-rr-rfi-td>
             </ui-page-empty>
         </div>
     </div>
@@ -13,8 +14,12 @@
 import MrRrRfiTd from './table/MrRrRfiTd.vue'
 import MrRrRfiTr from './table/MrRrRfiTr.vue'
 import UiPageEmpty from '../../../../funcks/ui_view/empty/UiPageEmpty.vue'
+import ViewSendTipType from '../../../../component/view/contact/ViewSendTipType.vue'
 export default {
-  components: { MrRrRfiTr, MrRrRfiTd, UiPageEmpty },
+  components: { MrRrRfiTr, MrRrRfiTd, UiPageEmpty, ViewSendTipType },
+    props: [
+        'send_iist', 'contact'
+    ],
     methods: {
         async fetching() {
             this.loading = true

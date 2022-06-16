@@ -1,10 +1,11 @@
 <template>
     <div class="td pl-ip_icon">
-        <div class="w-24">{{ one.project_name }}</div>
-        <div class="w-46">{{ one.uid }}</div>
-        <div class="w-18">{{ one.date }}</div>
-        <div class="w-12 t-c">
-            <ui-table-opera @view="go('/admin/photo_report/photo_report_review/photo_report_review_detail')" :_mode="3"></ui-table-opera>
+        <div class="w-22">{{ one.uid }}</div>
+        <div class="w-37 t-elip_x2">{{ one.location.address }}</div>
+        <div class="w-21">{{ one.situation }}</div>
+        <div class="w-12">{{ one.date }}</div>
+        <div class="w-8 t-c">
+            <ui-table-opera @view="go('/admin/photo_report/photo_report_review/photo_report_review_detail?id=' + one.uid)" :_mode="3"></ui-table-opera>
         </div>
     </div>
 </template>

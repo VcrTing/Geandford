@@ -2,18 +2,18 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                <b>項目名稱：</b><span>{{ one.name }}</span>
+                <b>項目名稱：</b><span>{{ one.project.name }}</span>
             </p>
             <p class="w-31">
                 <b>日期：</b><span>{{ one.date }}</span>
             </p>
             <p class="w-32">
-                <b>天氣：</b><span>{{ one.wearth }}</span>
+                <b>天氣：</b><span>{{ one.weather }}</span>
             </p>
         </div>
-        <p>
+        <div>
             <b>參考編號：</b><span>{{ one.uid }}</span>
-        </p>
+        </div>
     </div>
 </template>
 

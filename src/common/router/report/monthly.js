@@ -23,7 +23,7 @@ export default (head = '') => {
                     component: MrRr
                 },
                 {
-                    path: head + '/report_review/mr_rr_detail/:id',
+                    path: head + '/report_review/mr_rr_detail',
                     component: MrRrDetail
                 },
                 

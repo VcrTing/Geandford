@@ -1,8 +1,8 @@
 <template>
-    <div class="tr">
-        <div class="w-32">傷亡人數</div>
-        <div class="w-50">事故數量</div>
-        <div class="w-18">日期</div>
+    <div class="tr pl-ip_icon">
+        <div class="w-28">傷亡人數</div>
+        <div class="w-30">事故數量</div>
+        <div class="w-42">日期</div>
     </div>
 </template>
 
