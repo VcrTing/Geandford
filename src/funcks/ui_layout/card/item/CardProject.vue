@@ -56,7 +56,7 @@ export default {
             return src[ Math.floor( Math.random() * src.length ) ]
         },
         cover() {
-            return 0 // this.conf.baseURL + this.view.strapi.cover(this.one.thumbnail)
+            return this.conf.baseURL + this.view.strapi.cover(this.one.thumbnail)
         }
     }
 }

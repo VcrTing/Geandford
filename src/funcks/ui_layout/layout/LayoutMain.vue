@@ -36,6 +36,8 @@ export default {
         menu_funck(n, o) { this.menu = (n == 1) }
     },
     computed: {
+        token() { return this.$store.state.token },
+
         menu_funck() { return this.$store.state.funck.menu },
 
         // 激活项目

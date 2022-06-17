@@ -2,8 +2,7 @@
     <nav class="fx-s px_x2 w-100">
         <div class="w-70">
             <span class="hand view-p" @click="menu(1)">
-                MENU
-                <!--i class="mdi mdi-menu h5"></i-->
+                菜單
             </span>
         </div>
         <div class="w-30 fx-r">
@@ -11,7 +10,9 @@
             <span class="px"></span>
             <drop-down>
                 <user-face-name slot="tit"></user-face-name>
-                <div class="t-c px_x2" slot="cont">
+                <div class="t-c px" slot="cont">
+                    <button class="err min-4em py" @click="change">切換項目</button>
+                    <hr/>
                     <button class="err min-4em py" @click="out">登出</button>
                 </div>
             </drop-down>
@@ -26,12 +27,18 @@ export default {
   components: { UserFaceName, DropDown, UiSearchTop },
     methods: {
         menu(num) {
-            console.log('菜单 =', num)
+            console.log('菜單 =', num)
             this.$store.commit('changeFunck', [ 'menu', num ])
         },
 
+        change() {
+            // this.$store.commit('changeActive', [ 'project_id', null ])
+            // sessionStorage.setItem('gendford_project_id', '')
+            //this.$store.commit('change', [ 'project', null ])
+            setTimeout(e => this.go('/project') ,200)
+        },
+
         out() {
-            
             this.$router.push('/login')
         }
     }

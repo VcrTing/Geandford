@@ -17,7 +17,6 @@ export default {
             if (id && id !== 0) {
                 const res = await this.serv.project.one(this, id, { })
                 this.$store.commit('change', [ 'project', res ])
-                // console.log('当前项目 =', res)
             }
         },
 

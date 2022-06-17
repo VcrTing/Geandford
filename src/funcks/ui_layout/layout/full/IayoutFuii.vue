@@ -1,6 +1,6 @@
 <template>
     <div class="layout-full">
-        <div class="fx-s pb_x2">
+        <div class="fx-s pb">
             <div class="layout-full-logo">
                 <logo class="img"></logo>
             </div>
@@ -11,7 +11,7 @@
                 <h1>{{ header }}</h1>
             </div>
             <div class="w-30 t-r">
-                <button class="btn-def btn-pri righter">建立壹個新項目</button>
+                
             </div>
         </div>
         <div class="py">
