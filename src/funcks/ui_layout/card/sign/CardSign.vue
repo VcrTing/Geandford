@@ -7,7 +7,7 @@
 
         </div-->
         <a class="card-sign-opera" :href="conf.baseURL + one.url">
-            <span class="">下载</span>
+            <span class="">下載</span>
         </a>
         <img :src="conf.baseURL + one.url"/>
     </div>

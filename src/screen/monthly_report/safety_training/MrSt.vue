@@ -42,7 +42,7 @@ export default {
             try {
                 this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
             } catch(err) { }
-            console.log('数据 safety_training =', res)
+            console.log('數據 safety_training =', res)
         },
     },
     data() {

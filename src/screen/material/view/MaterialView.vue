@@ -1,7 +1,7 @@
 <template>
     <layout-screen>
         <iayout-filter-def 
-            :_pahd="'輸入物料名称或物料数量進行搜索'"
+            :_pahd="'輸入物料名稱或物料數量進行搜索'"
             :param_search="[ 'material_name_contains' , 'total_contains' ]"
             @sign="funni"
             slot="bar"></iayout-filter-def>
@@ -58,7 +58,7 @@ export default {
             try {
                 this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
             } catch(err) { }
-            console.log('数据 =', res)
+            console.log('數據 =', res)
         },
     },
     data() {

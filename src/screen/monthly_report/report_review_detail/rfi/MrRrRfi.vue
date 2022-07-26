@@ -31,8 +31,8 @@ export default {
         return {
             loading: true, 
             many: [ {
-                    name: '王总', email: 'vvv@123.com', phone: '+852 23339998', type: 'RFI', date: '2022-12-12'}, {
-                    name: '刘总', email: 'vvv@124.com', phone: '+852 23339977', type: 'RFI', date: '2022-12-12'},
+                    name: '王總', email: 'vvv@123.com', phone: '+852 23339998', type: 'RFI', date: '2022-12-12'}, {
+                    name: '劉總', email: 'vvv@124.com', phone: '+852 23339977', type: 'RFI', date: '2022-12-12'},
                 ]
         }
     }

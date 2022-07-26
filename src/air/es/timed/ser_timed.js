@@ -2,7 +2,7 @@
 import moment from "moment"
 
 const weeks = [
-    '星期一',
+    '星期壹',
     '星期二',
     '星期三',
     '星期四',
@@ -40,7 +40,7 @@ const ser_timed = function(e, mode = 0, long = false, cn = false) {
         }
         return long ? e.format('yyyy-MM-DD hh:mm:ss') : e.format('yyyy-MM-DD')
     }
-    return long ? e.format('yyyy年MM月DD日 hh时mm分ss秒') : e.format('yyyy年MM月DD日')
+    return long ? e.format('yyyy年MM月DD日 hh時mm分ss秒') : e.format('yyyy年MM月DD日')
 }
 
 const ser_minut = function(e, char = '.') {

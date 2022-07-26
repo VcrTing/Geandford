@@ -44,7 +44,7 @@ export default {
             try {
                 this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
             } catch(err) { }
-            console.log('数据 daily_report =', res)
+            console.log('數據 daily_report =', res)
         },
     },
     data() {

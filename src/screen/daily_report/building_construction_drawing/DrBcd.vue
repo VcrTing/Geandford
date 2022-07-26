@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import PanelMenuSecond from '../../../funcks/ui/panel/PanelMenuSecond.vue'
 import UiMenuSecond from '../../../funcks/ui_element/menu/UiMenuSecond.vue'
 import LayoutScreen from '../../../funcks/ui_layout/layout/screen/LayoutScreen.vue'
 import DrBcdTd from './table/DrBcdTd.vue'
@@ -39,7 +38,7 @@ import UiEmptyDef from '../../../funcks/ui_view/empty/UiEmptyDef.vue'
 import CpBcDrTdWrapper from '../../../component/daily_report/bc_drawing_report/CpBcDrTdWrapper.vue'
 
 export default {
-    components: { LayoutScreen, PanelMenuSecond, DrBcdTr, DrBcdTd, UiMenuSecond, IayoutFilterDef, UiEmptyDef, CpBcDrTdWrapper },
+    components: { LayoutScreen, DrBcdTr, DrBcdTd, UiMenuSecond, IayoutFilterDef, UiEmptyDef, CpBcDrTdWrapper },
      computed: {
         pro() { return this.$store.state.project },
         iong() { return this.many_origin.length },
@@ -55,7 +54,7 @@ export default {
         },
         async fetching(cond = { }) {
             let res = await this.serv.daily.drawing_report(this, this.pro.uid, cond)
-            this.many_origin = res; this.second = res[0].id
+            this.many_origin = res; this.second = res && res[0] ? res[0].id : null
             console.log('数据 drawing_report =', res)
         },
     },

@@ -1,5 +1,7 @@
 
-const TEST = false
+const TEST = true
+
+const VERSION = '0.96'
 
 const baseURL = 'https://strapi02.svr.up5d.com'
 // const baseURL = 'http://127.0.0.1:1337'
@@ -54,6 +56,8 @@ export default {
   TEST,
   STRAPI,
   ENDPOINT,
+
+  VERSION,
   
   funcks: require('./funcks/conf_funcks'),
 }

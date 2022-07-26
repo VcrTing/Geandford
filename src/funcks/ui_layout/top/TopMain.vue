@@ -8,12 +8,14 @@
         <div class="w-30 fx-r">
             <!--ui-search-top class=""></！ui-search-top-->
             <span class="px"></span>
-            <drop-down>
+            <drop-down :_cis="'auth-menu'">
                 <user-face-name slot="tit"></user-face-name>
-                <div class="t-c px" slot="cont">
-                    <button class="err min-4em py" @click="change">切換項目</button>
+                <div class="t-c" slot="cont">
+                    <button class="min-4em py" @click="change">
+                        切換項目
+                    </button>
                     <hr/>
-                    <button class="err min-4em py" @click="out">登出</button>
+                    <button class="min-4em py" @click="out">登出</button>
                 </div>
             </drop-down>
         </div>
@@ -25,6 +27,7 @@ import DropDown from '../../ui/dropdown/DropDown.vue'
 import UiSearchTop from '../../ui_element/search/UiSearchTop.vue'
 export default {
   components: { UserFaceName, DropDown, UiSearchTop },
+    // mounted() { this.$store.commit('changeFunck', [ 'menu', 1 ]) },
     methods: {
         menu(num) {
             console.log('菜單 =', num)
@@ -34,7 +37,7 @@ export default {
         change() {
             // this.$store.commit('changeActive', [ 'project_id', null ])
             // sessionStorage.setItem('gendford_project_id', '')
-            //this.$store.commit('change', [ 'project', null ])
+            // this.$store.commit('change', [ 'project', null ])
             setTimeout(e => this.go('/project') ,200)
         },
 

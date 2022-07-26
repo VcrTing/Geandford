@@ -41,7 +41,7 @@ export default {
             else if (_L >= 1 && !ex_apr_d) { return 0 }
             else if (_L >= 1 && sts == 'rejected') { return 0 }
 
-            // 计算 14 天数 相关
+            // 計算 14 天數 相關
             if (_L >= 1) {
                 if (ex_apr_d && !ac_apr_d) { 
                     return this.view.timed.subNow( ex_apr_d ) > 14 ? 2 : 1
@@ -61,7 +61,7 @@ export default {
     }
 }
 /*
-数据
+數據
     const ex_sub_d = this.one.expected_submission_date
     const ex_apr_d = this.one.expected_approval_date
     const ac_apr_d = this.one.actual_approval_date
@@ -78,7 +78,7 @@ export default {
         if (_L >= 1 && sts == 'rejected') { return 0 }
     }
 
-    // 计算 14 天数 相关
+    // 計算 14 天數 相關
     if (_L >= 1) {
         if (ex_apr_d && !ac_apr_d) { 
             return this.view.timed.subNow( ex_apr_d ) > 14 ? 2 : 1
@@ -91,17 +91,17 @@ export default {
 
 逾期：
     1.
-        drawing form 长度 = 0，
+        drawing form 長度 = 0，
         以及
         expected submission date = ''
         （需要有預計時間）
     2.
-        drawing form 长度 >= 1，
+        drawing form 長度 >= 1，
         以及
         expected approval date = ''
         （需要有預計時間）
     3.
-        drawing form 长度 >= 1，
+        drawing form 長度 >= 1，
         以及
         drawing form status = 'rejected'
 
@@ -110,22 +110,22 @@ export default {
     or 
     now - src > 14：
         1.
-            drawing form 长度 = 0，
+            drawing form 長度 = 0，
             以及
             expected submission date != ''
                 (Toay - expected submission date)
         2.
-            drawing form 长度 >= 1，
+            drawing form 長度 >= 1，
             以及
             expected approval date != ''
             以及
             actual approval date = ''
                 (Toay - expected approval date)
 
-无状态：
-    drawing form 长度 >= 1，
+無狀態：
+    drawing form 長度 >= 1，
     以及
-    已提交，status = '批准'
+    已提交，status = '批準'
 
 */
 

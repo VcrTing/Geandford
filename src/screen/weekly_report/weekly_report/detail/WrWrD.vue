@@ -32,7 +32,7 @@ export default {
     tabs() {
         return [
             { dt: this.detai.entrance, txt: '進出途徑' },
-            { dt: this.detai.general, txt: '一般事項' },
+            { dt: this.detai.general, txt: '壹般事項' },
             { dt: this.detai.work_at_height, txt: '高空作業' },
             { dt: this.detai.weight_lifting, txt: '起重器械及起重裝置' },
             { dt: this.detai.electricity, txt: '電力' },

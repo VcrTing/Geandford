@@ -24,18 +24,18 @@
                         <aoc-d-td v-for="(v, i) in e_representative" :key="i" :one="v"></aoc-d-td>
                     </ui-td-items-wrapper>
                     
-                    <!-- 东主或代理人 -->
-                    <ui-td-items-wrapper :tit="'东主或代理人'" :index="null">
+                    <!-- 東主或代理人 -->
+                    <ui-td-items-wrapper :tit="'東主或代理人'" :index="null">
                         <aoc-d-td v-for="(v, i) in c_representative" :key="i" :one="v"></aoc-d-td>
                     </ui-td-items-wrapper>
 
-                    <!-- 设计师 -->
-                    <ui-td-items-wrapper :tit="'设计师'" :index="null">
+                    <!-- 設計師 -->
+                    <ui-td-items-wrapper :tit="'設計師'" :index="null">
                         <aoc-d-td v-for="(v, i) in designer" :key="i" :one="v"></aoc-d-td>
                     </ui-td-items-wrapper>
 
-                    <!-- 工程负责人 -->
-                    <ui-td-items-wrapper :tit="'工程负责人'" :index="null">
+                    <!-- 工程負責人 -->
+                    <ui-td-items-wrapper :tit="'工程負責人'" :index="null">
                         <aoc-d-td v-for="(v, i) in person_in_charge" :key="i" :one="v"></aoc-d-td>
                     </ui-td-items-wrapper>
 
@@ -64,19 +64,19 @@ export default {
         employer() {
             return [ this.item.employer ]
         },
-        // 东主代理人
+        // 東主代理人
         e_representative() {
             return [ this.item.employer_representative ]
         },
-        // 东主代理人
+        // 東主代理人
         c_representative() {
             return this.item.contractor_representative
         },
-        // 设计师 
+        // 設計師 
         designer() {
             return this.item.contract_designer
         },
-        // 工程负责人
+        // 工程負責人
         person_in_charge() {
             return this.item.contract_person_in_charge
         },

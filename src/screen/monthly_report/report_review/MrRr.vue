@@ -42,7 +42,7 @@ export default {
             try {
                 this.many_origin = this.view.sort.sorTime( res, false, 'created_at' )
             } catch(err) { }
-            console.log('数据 report_review =', res)
+            console.log('數據 report_review =', res)
         },
     },
     data() {

@@ -13,6 +13,8 @@ import serv from '@/serv/serv'
 import view from '@/air/es/view'
 import validate from '@/air/es/validate'
 
+import '@fortawesome/fontawesome-free'
+
 Vue.prototype.net = net
 Vue.prototype.conf = conf
 

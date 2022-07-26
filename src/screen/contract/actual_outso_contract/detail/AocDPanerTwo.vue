@@ -4,7 +4,7 @@
             <p class="sub">依照香港法律、法規、守則及結合香港家具裝修的特點，雇主與承建商雙方與平等、自、協商壹致的基礎上，就承建商承包雇主的家居裝飾工程的有關事宜達成協議如下：</p>
             
             <div>
-                <h6 class="py">附件一(承建商報價單)</h6>
+                <h6 class="py">附件壹(承建商報價單)</h6>
                 <ui-td-downioad :_ioad="ioad" :srcs="item.attachment_1"></ui-td-downioad>
 
                 <h6 class="py">附件二(承建商包括材料)</h6>

@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="t-r">
-            <button @click="$emit('detail')" class="btn-pri_thin py_s px_x2 btn-k">详情</button>
+            <button @click="$emit('detail')" class="btn-pri_thin py_s px_x2 btn-k">詳情</button>
         </div>
     </div>
 </template>

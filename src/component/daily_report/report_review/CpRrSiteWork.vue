@@ -21,7 +21,7 @@ export default {
     ],
     methods: { plus() { },
         trash(pk) { 
-            console.log('删除PK =', pk)
+            console.log('刪除PK =', pk)
         }
     }
 }

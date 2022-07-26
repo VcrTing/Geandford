@@ -33,7 +33,7 @@ export default {
         async fetching(cond = { }) {
             let res = await this.serv.pro_expense.pro_expense(this, this.pro.uid, cond)
             this.detai = res
-            console.log('数据 =', res)
+            console.log('數據 =', res)
         },
     },
     data() {

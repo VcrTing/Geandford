@@ -58,7 +58,7 @@ export default {
         async fetching(cond = { }) {
             let res = await this.serv.collab.collab(this, this.pro.uid, cond)
             this.dt = res
-            console.log('数据 =', res)
+            console.log('數據 =', res)
         },
     },
     data() {

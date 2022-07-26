@@ -3,7 +3,7 @@
         <div>
             <timed-picker
                 :timed="start"
-                :pahd="'开始时间'"
+                :pahd="'開始時間'"
             ></timed-picker>
         </div>
         <div class="px">
@@ -12,7 +12,7 @@
         <div>
             <timed-picker
                 :timed="start"
-                :pahd="'结束时间'"
+                :pahd="'結束時間'"
             ></timed-picker>
         </div>
         <div class="fx-1 fx-r pr_x2">

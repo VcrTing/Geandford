@@ -7,15 +7,15 @@
         <hr/>
             <div class="pt" v-if="one.contractor_contact">
                 <div class="f-txt-ine py-0">
-                    <p :class="'w-' + _wide[0]" class="b">承建商名称 </p>
+                    <p :class="'w-' + _wide[0]" class="b">承建商名稱 </p>
                     <p :class="'w-' + _wide[1]">{{ one.contractor_name }}</p>
                 </div>
                 <div class="f-txt-ine py-0">
-                    <p :class="'w-' + _wide[0]" class="b">承建商负责人 </p>
+                    <p :class="'w-' + _wide[0]" class="b">承建商負責人 </p>
                     <p :class="'w-' + _wide[1]">{{ one.contractor_contact.name }}</p>
                 </div>
                 <div class="f-txt-ine py-0">
-                    <p :class="'w-' + _wide[0]" class="b">承建商联络电话</p>
+                    <p :class="'w-' + _wide[0]" class="b">承建商聯絡電話</p>
                     <p :class="'w-' + _wide[1]">{{ one.contractor_contact.phone }}</p>
                 </div>
             </div>
@@ -41,18 +41,18 @@
             </div>
         <hr/>
             <div class="f-txt-ine">
-                <p :class="'w-' + _wide[0]" class="b">合约总价</p>
+                <p :class="'w-' + _wide[0]" class="b">合約總價</p>
                 <p :class="'w-' + _wide[1]">{{ one.actual_cost ? one.actual_cost : 0 }}</p>
             </div>
         <hr/>
             <div class="f-txt-ine">
-                <p :class="'w-' + _wide[0]" class="b">实际外判价</p>
+                <p :class="'w-' + _wide[0]" class="b">實際外判價</p>
                 <p :class="'w-' + _wide[1]">{{ one.actual_contract_price ? one.actual_contract_price : 0 }}</p>
             </div>
         <hr/>
             <div class="f-txt-ine">
-                <div class="w-44">备注</div>
-                <div class="w-56">{{ one.remarks ? one.remarks : '(无备注)' }}</div>
+                <div class="w-44">備註</div>
+                <div class="w-56">{{ one.remarks ? one.remarks : '(無備註)' }}</div>
             </div>
     </div>
 </template>

@@ -1,8 +1,8 @@
 <template>
     <layout-cont>
         <layout-filter-def slot="bar"
-            :_pahd="'請輸入合约名称'"
-            :_plus="'添加合约'"
+            :_pahd="'請輸入合約名稱'"
+            :_plus="'添加合約'"
             >
                 <vf-def-select @sign="(v) => {}" class="btn-def"></vf-def-select>
             </layout-filter-def>

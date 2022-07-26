@@ -1,12 +1,17 @@
 <template>
     <panel-menu-second class="pr_x2 righter">
-        <ul class="ul-menu-def pb">
+        <ul class="ul-menu-def pb" v-if="items && items.lenght > 0">
             <li class="py_n px pl_x2" v-for="(v, i) in items" :key="i" 
                 :class="{ 'active': v.id == now }" @click="option(v.id)">
                 <span class="t-cap">
                     {{ v.title }}
                 </span>
             </li>    
+        </ul>
+        <ul v-else class="ul-menu-def">
+            <li class="py_n px pl_x2">
+                沒有項目
+            </li>
         </ul>
     </panel-menu-second>
 </template>
@@ -25,7 +30,6 @@ export default {
     },
     watch: {
         now(n, o) {
-            console.log('CONT =', this.cont(n))
             this.$emit('content', this.cont(n))
         }
     },

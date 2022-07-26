@@ -20,14 +20,14 @@ export default {
     data() {
         return {
             txts: {
-                'slow': '状况：慢',
-                'quick': '状况：快'
+                'slow': '狀況：慢',
+                'quick': '狀況：快'
             }
         }
     },
     methods: {
         tit(v) {
-            return v ? this.txts[ v ]: '任务'
+            return v ? this.txts[ v ]: '任務'
         }
     }
 }

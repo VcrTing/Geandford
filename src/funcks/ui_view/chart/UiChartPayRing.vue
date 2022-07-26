@@ -16,7 +16,7 @@ export default {
         }
     },
     computed: {
-        named() { return [ '现金', '转账', 'Paypal', 'Alipay HK', 'EPS', 'WeChat Pay HK', 'Pay ME' ] },
+        named() { return [ '現金', '轉賬', 'Paypal', 'Alipay HK', 'EPS', 'WeChat Pay HK', 'Pay ME' ] },
         mon() { return [] }
     },
     mounted() {
@@ -30,7 +30,7 @@ export default {
             series: [
                 {
                 type: 'pie',
-                radius: ['58%', '90%'], // 环
+                radius: ['58%', '90%'], // 環
                 center: [ "40%", "50%"], // 方位
                 avoidLabelOverlap: true,
                 label: {

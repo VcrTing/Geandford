@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h5 class="pb">合约条款</h5>
+        <h5 class="pb">合約條款</h5>
         <div v-if="!_ioad">
             <div v-if="one && one.contract_terms && one.contract_terms.length > 0">
                 <div class="td-iin pl-ip_icon" v-for="(v, i) in one.contract_terms" :key="i">
