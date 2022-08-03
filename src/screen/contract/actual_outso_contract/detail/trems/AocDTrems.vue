@@ -7,9 +7,7 @@
                     <div>
                         {{ v.name }}
                     </div>
-                    <a :href="conf.baseURL + v.url">
-                        <ui-table-opera :_mode="2"></ui-table-opera>
-                    </a>
+                    <ui-table-opera :_ink="v.url" :_mode="2"></ui-table-opera>
                 </div>
             </div>
             <ui-no-data v-else></ui-no-data>

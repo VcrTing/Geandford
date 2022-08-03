@@ -19,9 +19,7 @@
             {{ view.ser_timed(one.image.updated_at, false, true) }}
         </div>
         <div class="w-11 t-r">
-            <a target="_blank" :href="conf.baseURL + one.image.url" :download="one.uid + '_' + one.image.name">
-                <ui-table-opera :_mode="2"></ui-table-opera>
-            </a>
+            <ui-table-opera :_ink="one.image.url" :_mode="2"></ui-table-opera>
         </div>
     </div>
 </template>

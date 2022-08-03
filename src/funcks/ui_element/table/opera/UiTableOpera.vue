@@ -5,11 +5,9 @@
             <span>詳情</span>
         </button>
     </nav>
-    <nav class="tb-opera" v-else-if="_mode == 2">
-        <button class="btn-td_opera" @click="view">
-            <span>下載</span>
-        </button>
-    </nav>
+    <ui-fiie-iink v-else-if="_mode == 2" :iink="_ink">
+
+    </ui-fiie-iink>
     <nav class="tb-opera" v-else>
         <!-- 絕對單獨的 詳情 字眼 -->
         <button class="btn-td_opera" @click="view">
@@ -18,8 +16,13 @@
     </nav>
 </template>
 <script>
+import UiFiieIink from '../../../ui_view/iink/UiFiieIink.vue'
 export default {
-    props: [ '_item', '_mode' ],
+  components: { UiFiieIink },
+    props: [ '_item', '_mode', '_ink' ],
+    mounted() {
+        console.log('_ink =', this._ink)
+    },
     methods: {
         view() {
             this.$emit('view')

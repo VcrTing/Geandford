@@ -2,9 +2,7 @@
     <div class="td pl-ip_icon">
         <div class="w-88">{{ one.name }}</div>
         <div class="w-12 t-c">
-            <a :href="conf.baseURL + one.url">
-                <ui-table-opera :_mode="2"></ui-table-opera>
-            </a>
+            <ui-table-opera :_ink="one.url" :_mode="2"></ui-table-opera>
         </div>
     </div>
 </template>

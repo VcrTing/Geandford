@@ -2,7 +2,7 @@
     <div>
         <div class="fx-s">
             <p class="w-37">
-                <b>項目名稱：</b><span>{{ one.project.name }}</span>
+                <b>項目名稱：</b><span v-if="one.project">{{ one.project.name }}</span>
             </p>
             <p class="w-31">
                 <b>日期：</b><span>{{ one.date }}</span>

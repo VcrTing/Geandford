@@ -1,6 +1,6 @@
 <template>
     <panel-menu-second class="pr_x2 righter">
-        <ul class="ul-menu-def pb" v-if="items && items.lenght > 0">
+        <ul class="ul-menu-def pb" v-if="items">
             <li class="py_n px pl_x2" v-for="(v, i) in items" :key="i" 
                 :class="{ 'active': v.id == now }" @click="option(v.id)">
                 <span class="t-cap">

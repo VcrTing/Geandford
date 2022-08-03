@@ -7,8 +7,8 @@
             <panel-def :head="'基本信息'">
               <cp-dr-rr-d-base-msg :one="detai"></cp-dr-rr-d-base-msg>
             </panel-def>
-            <h4 class="py">工地現場工作</h4>
-            <card-construction-work :items="detai.task" :head="'任務'"></card-construction-work>
+            <h4 class="py" v-if="detai.task">工地現場工作</h4>
+            <card-construction-work v-if="detai.task" :items="detai.task" :head="'任務'"></card-construction-work>
           </div>
 
           <!-- 附件 -->
@@ -30,8 +30,9 @@ import CpDrRrDBaseMsg from '../../../../component/daily_report/report_review/CpD
 import DrRrDc from './contact/DrRrDc.vue'
 import CardConstructionWork from '../../../../funcks/ui/card/construction/CardConstructionWork.vue'
 import UiTdDownioad from '../../../../funcks/ui_element/table/td_downioad/UiTdDownioad.vue'
+import Loading from '../../../../funcks/ui_view/shimmer/Loading.vue'
 export default {
-  components: { LayoutScreenForm, UiStepTab, PanelDef, CpDrRrDBaseMsg, DrRrDc, CardConstructionWork, UiTdDownioad },
+  components: { LayoutScreenForm, UiStepTab, PanelDef, CpDrRrDBaseMsg, DrRrDc, CardConstructionWork, UiTdDownioad, Loading },
   data() {
     return {
       tab: 1,

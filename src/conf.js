@@ -1,5 +1,5 @@
 
-const TEST = true
+const TEST = false
 
 const VERSION = '0.96'
 

@@ -4,9 +4,7 @@
             {{ one.name }}
         </div>
         <div class="w-12">
-            <a target="_blank" :href="conf.baseURL + one.url" :download="one.uid + '_' + one.url">
-                <ui-table-opera :_mode="2"></ui-table-opera>
-            </a>
+            <ui-table-opera :_ink="one.url" :_mode="2"></ui-table-opera>
         </div>
     </div>
 </template>
